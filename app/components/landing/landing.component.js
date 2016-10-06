@@ -22,11 +22,43 @@
 	_contentProject = [],
 	_titleElement = null,
 	_contentElement = null,
-	_timmingFunction = null;
+	_timmingFunction = null,
+	_$animationContainers = null,
+	_$elementToAnimate = null,
+	_$elementHeight = null,
+	_$elementTopPosition = null,
+	_$elementBottomPosition = null,
+	_$window = null,
+	_$window_height = null,
+	_$window_top_position = null,
+	_$window_bottom_position = null;
 
 
 	function LandingCtrl($window, $timeout, $interval, $rootScope){
-		var ctrl = this;
+		var ctrl = this,
+		_$window = angular.element($window);
+		_$animationContainers = angular.element(document.getElementsByClassName('animation-container'));
+
+		_$window.on('scroll', _checkIfInView);
+
+		function _checkIfInView(){
+			_$window_height = _$window.height();
+			_$window_top_position = _$window.scrollTop();
+			_$window_bottom_position = _$window_top_position + _$window_height;
+
+			_.each(_$animationContainers, function(e){
+				_$elementToAnimate = angular.element(e);
+				_$elementHeight = _$elementToAnimate.outerHeight();
+				_$elementTopPosition = _$elementToAnimate.offset().top;
+				_$elementBottomPosition = (_$elementTopPosition + _$elementHeight + 500);
+
+				if ((_$elementBottomPosition >= _$window_top_position) && (_$elementTopPosition <= _$window_bottom_position)) {
+						_$elementToAnimate.addClass('in-view');
+					
+		    }
+			});
+		};
+
 		_currentStringIndex = -1;
 		_titleElement = angular.element(document.getElementById('titleElement'));
 		_contentElement = angular.element(document.getElementById('contentElement'));
