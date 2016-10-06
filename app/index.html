@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="es" class="no-js"> <!--<![endif]-->
+<head>
+	<base href="/">
+	<title>Invertir para Movernos</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+	<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:100,300,400,500" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" /> -->
+	<!-- build:css css/styles.css -->
+	<!-- bower:css -->
+	<link rel="stylesheet" href="../bower_components/angular-material/angular-material.css" />
+	<link rel="stylesheet" href="../bower_components/slick-carousel/slick/slick.css" />
+	<link rel="stylesheet" href="../bower_components/slick-carousel/slick/slick-theme.css" />
+	<link rel="stylesheet" href="../bower_components/leaflet/dist/leaflet.css" />
+	<link rel="stylesheet" href="../bower_components/leaflet-sidebar/src/L.Control.Sidebar.css" />
+	<!-- endbower -->
+	<!-- inject:own:css -->
+	<link rel="stylesheet" href="css/styles.css">
+	<!-- endinject -->
+	<!-- endbuild -->
+	<!--[if lte IE 8]>
+	    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
+	<![endif]-->
+	<!--[if gt IE 8]><!-->
+		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+	<!--<![endif]-->
+</head>
+
+<body ng-app="ipm">
+	<header-bar></header-bar>
+	<div style="height: 100%;" ui-view></div>
+
+	<!-- build:js js/lib.js -->
+	<!-- bower:js -->
+	<script src="../bower_components/jquery/dist/jquery.js"></script>
+	<script src="../bower_components/angular/angular.js"></script>
+	<script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+	<script src="../bower_components/angular-animate/angular-animate.js"></script>
+	<script src="../bower_components/underscore/underscore.js"></script>
+	<script src="../bower_components/angular-messages/angular-messages.js"></script>
+	<script src="../bower_components/angular-aria/angular-aria.js"></script>
+	<script src="../bower_components/angular-material/angular-material.js"></script>
+	<script src="../bower_components/highcharts/highcharts.js"></script>
+	
+	<script src="../bower_components/slick-carousel/slick/slick.js"></script>
+	<script src="../bower_components/angular-slick-carousel/dist/angular-slick.js"></script>
+	<script src="../bower_components/leaflet/dist/leaflet-src.js"></script>
+	<script src="../bower_components/leaflet-sidebar/src/L.Control.Sidebar.js"></script>
+	<!-- endbower -->
+	<!-- endbuild -->
+	<!-- build:js js/app.js -->
+	<!-- inject:js -->
+	<script src="components/ipm.module.js"></script>
+	<script src="components/ipm.routes.js"></script>
+	<script src="components/downloads/download.component.js"></script>
+	<script src="components/header-bar/header.component.js"></script>
+	<script src="components/landing/landing.component.js"></script>
+	<script src="components/map/map.component.js"></script>
+	<script src="components/results/results.component.js"></script>
+	<script src="components/map/charts/year-2011/year2011.component.js"></script>
+	<script src="components/map/charts/year-2012/year-2012.component.js"></script>
+	<script src="components/map/charts/year-2013/year-2013.component.js"></script>
+	<script src="components/map/charts/year-2014/year-2014.component.js"></script>
+	<script src="components/map/charts/year-2015/year-2015.component.js"></script>
+	<!-- endinject -->
+	<!-- inject:own:geojson -->
+	<script src="geojson/zm.js"></script>
+	<!-- endinject -->
+	<!-- inject:templates:js -->
+	<!-- endinject -->
+	<!-- endbuild -->
+	<!-- <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script> -->
+
+</body>
+
+</html>

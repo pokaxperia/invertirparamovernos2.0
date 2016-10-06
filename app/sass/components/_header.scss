@@ -1,0 +1,236 @@
+/* Project Title */
+
+.m-project-title{
+	display: none;
+	left: 0;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	letter-spacing: 3px;
+	z-index: 1;
+}
+
+.m-project-title h2{
+	font-family: 'Alegreya Sans', sans-serif;
+	font-weight: 300;
+}
+
+/* Menu */
+.m-menu {
+	margin: 0;
+	padding: 0;
+	position: fixed;
+	right: 0px;
+	z-index: 10;
+}
+
+.active_link {
+	text-decoration: underline !important;
+}
+
+.m-menu__social {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+
+.m-menu__social li {
+	-moz-transition: border-color linear 0.25s;
+	-o-transition: border-color linear 0.25s;
+	-webkit-transition: border-color linear 0.25s;
+	cursor: pointer;
+	display: inline-block;
+	float: left;
+	transition: border-color linear 0.25s;
+}
+
+.m-menu__social li {
+	border-bottom: 2px solid #E6E6E6;
+	margin: 0;
+	padding: 2px 15px;
+	text-align: center;
+}
+
+.m-menu__social li:hover {
+	/* border-color: #FF8552; */
+	border-width: 1px;
+	-moz-transition: border-color linear 0.25s;
+	-o-transition: border-color linear 0.25s;
+	-webkit-transition: border-color linear 0.25s;
+	transition: border-color linear 0.25s;
+}
+
+/* .m-menu__social li i:before{
+	color: white;
+} */
+
+.m-menu__menu {
+	cursor: pointer;
+	display: inline-block;
+	padding: 15px;
+}
+
+.m-menu__menu span i.ipm-menu:before{
+	color:  white;
+	cursor: pointer;
+	font-size: 30px;
+}
+
+.m-menu__menu:hover{
+	background:  #FF8552;
+}
+
+.m-menu__line-current{
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	/* height: 2px; */
+	background-color: #FF8552;
+	border: 2px solid #FF8552;
+	left: 60px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 60px;
+}
+
+.m-medium-title--in-landing {
+	color:  white;
+}
+
+
+/* Overlay style */
+.overlay {
+	background: rgba(255, 133, 82, 0.9);
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+/* Overlay closing cross */
+.overlay .overlay-close {
+	background: url(../images/cross.png) no-repeat center center;
+	border: none;
+	color: transparent;
+	cursor: pointer;
+	height: 80px;
+	outline: none;
+	overflow: hidden;
+	position: absolute;
+	right: 20px;
+	text-indent: 200%;
+	top: 20px;
+	width: 80px;
+	z-index: 100;
+}
+
+/* Menu style */
+.overlay nav {
+	text-align: center;
+	position: relative;
+	top: 50%;
+	height: 60%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.overlay ul {
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+	display: inline-block;
+	height: 100%;
+	position: relative;
+}
+
+.overlay ul li {
+	display: block;
+	height: 20%;
+	height: calc(100% / 5);
+	min-height: 54px;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.overlay ul li a {
+	-webkit-transition: color 0.2s;
+	color: #fff;
+	display: block;
+	font-family: 'Alegreya Sans', sans-serif;
+	font-size: 54px;
+	font-weight: 100;
+	text-decoration: none;
+	transition: color 0.2s;
+	cursor: pointer;
+}
+
+
+.overlay ul li a:hover,
+.overlay ul li a:focus {
+	color: #B0BEC5;
+}
+
+/* Effects */
+.overlay-door {
+	visibility: hidden;
+	width: 0;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	-webkit-transition: width 0.5s 0.3s, visibility 0s 0.8s;
+	transition: width 0.5s 0.3s, visibility 0s 0.8s;
+	z-index: 10;
+}
+
+.overlay-door.open {
+	-webkit-transition: width 0.5s;
+	transition: width 0.5s;
+	visibility: visible;
+	width: 100%;
+	z-index: 10;
+}
+
+.overlay-door nav {
+	position: absolute;
+	left: 50%;
+	-webkit-transform: translateY(-50%) translateX(-50%);
+	transform: translateY(-50%) translateX(-50%);
+}
+
+.overlay-door nav,
+.overlay-door .overlay-close {
+	opacity: 0;
+	-webkit-transition: opacity 0.3s 0s;
+	transition: opacity 0.3s 0s;
+}
+
+.overlay-door.open nav,
+.overlay-door.open .overlay-close {
+	opacity: 1;
+	-webkit-transition-delay: 0.5s;
+	transition-delay: 0.5s;
+}
+
+.overlay-door.close nav,
+.overlay-door.close .overlay-close {
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+}
+
+@media screen and (max-height: 30.5em) {
+	.overlay nav {
+		height: 70%;
+		font-size: 34px;
+	}
+	.overlay ul li {
+		min-height: 34px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.m-project-title{
+		display: block;
+	}
+}

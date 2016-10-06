@@ -1,0 +1,29 @@
+<div class="m-project-title">
+	<h2 class="m-medium-title m-medium-title--in-landing" id="titleLanding">Invertir para movernos</h2>
+</div>
+
+<div class="m-menu">
+	<ul class="m-menu__social" id="social">
+		<li id="twitteIcon"><i class="ipm-twitter-logo"></i></li>
+		<li id="facebookIcon"><i class="ipm-facebook-logo"></i></li>
+	</ul>
+	<div class="m-menu__menu" id="menuButton" ng-click="$ctrl.openMenu()">
+		<span><i class="ipm-menu"></i></span>
+	</div>
+
+<!-- 	<div class="m-menu__line">
+		<span class="m-menu__line-current"></span>
+	</div> -->
+</div>
+
+<div class="overlay overlay-door" ng-class="{'open': $ctrl.isMenuOpen}">
+	<button type="button" class="overlay-close" ng-click="$ctrl.openMenu()">Close</button>
+	<nav>
+		<ul>
+			<li><a ui-sref="/" ui-sref-active="active_link" ng-click="$ctrl.openMenu()">Inicio</a></li>
+			<li><a ui-sref="resultados" ui-sref-active="active_link" ng-click="$ctrl.openMenu()">Resultados</a></li>
+			<li><a ui-sref="mapa" ui-sref-active="active_link" ng-click="$ctrl.openMenu()">Mapa</a></li>
+			<li><a ui-sref="descargas" ui-sref-active="active_link" ng-click="$ctrl.openMenu()">Descargas</a></li>
+		</ul>
+	</nav>
+</div>

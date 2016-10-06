@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+/**
+ *	Fonts
+ */
+ 
+@font-face {
+    font-family: "ipm";
+    src: url("../fonts/ipm.eot");
+    src: url("../fonts/ipm.eot?#iefix") format("embedded-opentype"),
+             url("../fonts/ipm.woff") format("woff"),
+             url("../fonts/ipm.ttf") format("truetype"),
+             url("../fonts/ipm.svg#ipm") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+        font-family: "ipm";
+        src: url("../fonts/ipm.svg#ipm") format("svg");
+    }
+}
+
+[class^="ipm-"]:before, [class*=" ipm-"]:before,
+[class^="ipm-"]:after, [class*=" ipm-"]:after {   
+    font-size: 20px;
+    font-family: ipm;
+    font-style: normal;
+    margin: 0px;
+}
+
+.ipm-car:before { content: "\f100";font-size: 35px; }
+.ipm-cycling:before { content: "\f101";font-size: 35px; }
+.ipm-download:before { content: "\f102"; }
+.ipm-facebook-logo:before { content: "\f103"; }
+.ipm-graphics:before { content: "\f104"; }
+.ipm-interactive:before { content: "\f105"; }
+.ipm-map:before { content: "\f106"; }
+.ipm-menu:before { content: "\f107"; }
+.ipm-paving:before { content: "\f108"; font-size: 35px;}
+.ipm-pedestrian:before { content: "\f109"; font-size: 35px;}
+.ipm-public:before { content: "\f10a"; font-size: 35px;}
+.ipm-transport:before { content: "\f10b"; font-size: 35px;}
+.ipm-twitter-logo:before { content: "\f10c"; }
+
+
+
+
+
+
+
