@@ -1,6 +1,7 @@
 .m-landing {
 	height: 100%;
 	position: relative;
+	overflow-x:hidden;
 }
 .m-landing__intro {
 	background: url('../images/landing_background.jpg') no-repeat;
@@ -65,6 +66,7 @@
 }
 
 .m-landing__container-link {
+	color: white;
 	cursor:pointer;
 	font-size: 20px;
 	font-weight: 300;
@@ -130,11 +132,11 @@
 	-webkit-transition: all 500ms ease-in-out;
 	-o-transition: all 500ms ease-in-out;
 	transition: all 500ms ease-in-out;
-	-moz-transform: translate3d(300px, 0px, 0px);
-	-webkit-transform: translate3d(300px, 0px, 0px);
-	-o-transform: translate(300px, 0px);
-	-ms-transform: translate(300px, 0px);
-	transform: translate3d(300px, 0px, 0px);
+	-moz-transform: translate3d(200px, 0px, 0px);
+	-webkit-transform: translate3d(200px, 0px, 0px);
+	-o-transform: translate(200px, 0px);
+	-ms-transform: translate(200px, 0px);
+	transform: translate3d(200px, 0px, 0px);
 }
 
 .in-view {

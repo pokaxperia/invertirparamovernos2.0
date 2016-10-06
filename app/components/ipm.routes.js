@@ -19,7 +19,7 @@
 			})
 			.state('descargas', {
 				url: '/descargas',
-				templateUrl: './components/downloads/downloads.html',
+				template: '<downloads></downloads>',
 			});
 	}]);
 

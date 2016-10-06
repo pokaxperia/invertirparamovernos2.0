@@ -1,0 +1,57 @@
+.m-downloads {
+	background-color:#F6F6F6;
+	padding: 120px 0px;
+}
+
+.m-downloads__card {
+	display:table;
+	width: 100%;
+	padding: 5px;
+}
+
+.m-downloads__card-inner {
+	-webkit-transition: box-shadow .3s;
+	background-color: white;
+	color: #888B8D;
+	display: table-cell;
+	height: 150px;
+	position: relative;
+	transition: box-shadow .3s;
+	vertical-align: middle;
+	font-weight: 500;
+	font-family: 'Alegreya Sans', sans-serif;
+}
+
+.m-downloads__card-inner__content {
+	display: table;
+  padding: 0 15%;
+}
+
+.m-downloads__card-inner__content-icon {
+	display: table-cell;
+	height: 21px;
+	line-height: 0;
+	min-width: 21px;
+	position: relative;
+	vertical-align: middle;
+	width: 21px;
+}
+
+.m-downloads__card-inner__content-name {
+	display: table-cell;
+	font-size: 22px;
+	line-height: 20px;
+	padding-left: 15%;
+	width: 100%;
+	
+}
+
+.m-downloads__card-inner:hover {
+	box-shadow: 1px 0 45px rgba(0,0,0,0.2);
+	color: $orange;
+	cursor: pointer;
+}
+
+.m-downloads__card-inner__content-icon i:before{
+	font-size: 30px;
+}

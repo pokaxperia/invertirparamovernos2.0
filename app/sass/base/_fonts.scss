@@ -30,19 +30,21 @@
     margin: 0px;
 }
 
-.ipm-car:before { content: "\f100";font-size: 35px; }
-.ipm-cycling:before { content: "\f101";font-size: 35px; }
+.ipm-car:before { content: "\f100"; }
+.ipm-cycling:before { content: "\f101"; }
 .ipm-download:before { content: "\f102"; }
-.ipm-facebook-logo:before { content: "\f103"; }
-.ipm-graphics:before { content: "\f104"; }
-.ipm-interactive:before { content: "\f105"; }
-.ipm-map:before { content: "\f106"; }
-.ipm-menu:before { content: "\f107"; }
-.ipm-paving:before { content: "\f108"; font-size: 35px;}
-.ipm-pedestrian:before { content: "\f109"; font-size: 35px;}
-.ipm-public:before { content: "\f10a"; font-size: 35px;}
-.ipm-transport:before { content: "\f10b"; font-size: 35px;}
-.ipm-twitter-logo:before { content: "\f10c"; }
+.ipm-download-data:before { content: "\f103"; }
+.ipm-download-document:before { content: "\f104"; }
+.ipm-facebook-logo:before { content: "\f105"; }
+.ipm-graphics:before { content: "\f106"; }
+.ipm-interactive:before { content: "\f107"; }
+.ipm-map:before { content: "\f108"; }
+.ipm-menu:before { content: "\f109"; }
+.ipm-paving:before { content: "\f10a"; }
+.ipm-pedestrian:before { content: "\f10b"; }
+.ipm-public:before { content: "\f10c"; }
+.ipm-transport:before { content: "\f10d"; }
+.ipm-twitter-logo:before { content: "\f10e"; }
 
 
 

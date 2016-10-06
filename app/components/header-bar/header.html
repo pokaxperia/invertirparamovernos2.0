@@ -18,12 +18,12 @@
 
 <div class="overlay overlay-door" ng-class="{'open': $ctrl.isMenuOpen}">
 	<button type="button" class="overlay-close" ng-click="$ctrl.openMenu()">Close</button>
-	<nav>
+	<nav class="js-is-loading">
 		<ul>
-			<li><a ui-sref="/" ui-sref-active="active_link" ng-click="$ctrl.openMenu()">Inicio</a></li>
-			<li><a ui-sref="resultados" ui-sref-active="active_link" ng-click="$ctrl.openMenu()">Resultados</a></li>
-			<li><a ui-sref="mapa" ui-sref-active="active_link" ng-click="$ctrl.openMenu()">Mapa</a></li>
-			<li><a ui-sref="descargas" ui-sref-active="active_link" ng-click="$ctrl.openMenu()">Descargas</a></li>
+			<li><a ui-sref-active="active_link" ng-click="$ctrl.goToView('/')">Inicio</a></li>
+			<li><a ui-sref-active="active_link" ng-click="$ctrl.goToView('resultados')">Resultados</a></li>
+			<li><a ui-sref-active="active_link" ng-click="$ctrl.goToView('mapa')">Mapa</a></li>
+			<li><a ui-sref-active="active_link" ng-click="$ctrl.goToView('descargas')">Descargas</a></li>
 		</ul>
 	</nav>
 </div>

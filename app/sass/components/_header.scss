@@ -219,6 +219,12 @@
 	transition-delay: 0s;
 }
 
+.overlay-door nav.is_loading {
+	opacity: 0;
+	-webkit-transition: opacity 0.3s 0s;
+	transition: opacity 0.3s 0s;
+}
+
 @media screen and (max-height: 30.5em) {
 	.overlay nav {
 		height: 70%;
