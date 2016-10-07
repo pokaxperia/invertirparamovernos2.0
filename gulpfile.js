@@ -69,7 +69,7 @@ gulp.task('html', ['cleaning-components'], function() {
 
 gulp.task('images', ['cleaning-images'], function() {
 	log('Copying images');
-	return gulp.src('./app/images/**/*.{jpg,png}')
+	return gulp.src('./app/images/**/*.{jpg,jpeg,png}')
 		.pipe($.imagemin({optimizationLevel: 4}))
 		.pipe(gulp.dest('public/images/'));
 });

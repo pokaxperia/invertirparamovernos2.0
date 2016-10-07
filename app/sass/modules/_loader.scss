@@ -15,7 +15,7 @@
 	position:fixed;
 	right: 0;
 	text-align:center;
-	top:50%;
+	top:calc(50% - 54px);
 	z-index:10;
 	-webkit-transform: translateY(50%);
 	-moz-transform: translateY(50%);
@@ -28,7 +28,7 @@
 	width: 49px;
 	height: 49px;
 	display: inline-block;
-	background: rgb(255,89,84);
+	background: $orange;
 	border-radius: 50%;
 }
 .cssload-loading i:nth-child(1){
@@ -40,7 +40,7 @@
 
 }
 .cssload-loading i:nth-child(2){
-	background: rgb(0,168,206);
+	background: $gray-smooth;
 	margin-left: -10px;
 	animation:cssload-loading-ani1 1.15s ease-in-out 0.58s infinite;
 		-o-animation:cssload-loading-ani1 1.15s ease-in-out 0.58s infinite;

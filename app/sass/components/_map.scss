@@ -31,7 +31,16 @@
 	margin: 0;
 }
 
-
 .m-sidebar__infra {
 	padding: 15px;
+}
+
+.highcharts-title {
+	color: $gray-smooth !important;
+}
+
+.slick-dots li button:before {
+  content: '';
+  border-radius: 50%;
+  background: $orange;
 }

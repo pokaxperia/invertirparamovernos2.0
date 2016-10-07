@@ -59,7 +59,6 @@
 			});
 		};
 
-		_currentStringIndex = -1;
 		_titleElement = angular.element(document.getElementById('titleElement'));
 		_contentElement = angular.element(document.getElementById('contentElement'));
 
@@ -95,9 +94,10 @@
 			$interval.cancel(_timmingFunction);
 			_timmingFunction = undefined;
 			ctrl.projectTitle = undefined;
+			_currentStringIndex = 0;
 
-			ctrl.projectTitle = _titleProject[0];
-			ctrl.projectContent = _contentProject[0];
+			ctrl.projectTitle = _titleProject[_currentStringIndex];
+			ctrl.projectContent = _contentProject[_currentStringIndex];
 			_timmingFunction = $interval(_setContentInterval, 8000);
 		};
 

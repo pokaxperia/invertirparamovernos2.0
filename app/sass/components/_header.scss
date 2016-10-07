@@ -38,17 +38,15 @@
 	-moz-transition: border-color linear 0.25s;
 	-o-transition: border-color linear 0.25s;
 	-webkit-transition: border-color linear 0.25s;
+	transition: border-color linear 0.25s;
+	border-bottom: 2px solid $gray-dark;
 	cursor: pointer;
 	display: inline-block;
 	float: left;
-	transition: border-color linear 0.25s;
-}
-
-.m-menu__social li {
-	border-bottom: 2px solid #E6E6E6;
 	margin: 0;
 	padding: 2px 15px;
 	text-align: center;
+	
 }
 
 .m-menu__social li:hover {
@@ -169,7 +167,7 @@
 
 .overlay ul li a:hover,
 .overlay ul li a:focus {
-	color: #B0BEC5;
+	color: $gray-smooth;
 }
 
 /* Effects */

@@ -28,31 +28,36 @@
 		titleLanding = angular.element(document.getElementById('titleLanding'));
 
 		overlayMenu = $element[0].children[2];
-		random_class = ['rgba(57,57,58,1)','rgba(41,115,115,1)','rgba(122,158,159,1)','rgba(255,133,82,1)'];
-		isRandomPath = random_class[Math.floor(Math.random()*random_class.length)];
+		//random_class = ['rgba(57,57,58,1)','rgba(41,115,115,1)','rgba(122,158,159,1)','rgba(136, 139, 141, 1)'];
+		//random_class = ['rgba(57,57,58,1)','rgba(136, 139, 141, 1)'];
+		//isRandomPath = random_class[Math.floor(Math.random()*random_class.length)];
 
 		head.$onInit = function() {
 			head._changeColor();
 			$rootScope.$on('$stateChangeSuccess', function(event, toState) {
-				head._changeColor(toState.url);
+				head._changeColor();
 			});
 			
-			menuButton[0].style.backgroundColor = isRandomPath;
-			twitterIcon[0].children[0].children[0].style.color = isRandomPath;
-			twitterIcon[0].children[1].children[0].style.color = isRandomPath;
-			overlayMenu.style.backgroundColor = isRandomPath;
+			menuButton[0].style.backgroundColor = 'rgba(57,57,58,1)';
+			// twitterIcon[0].children[0].children[0].style.color = 'rgba(57,57,58,1)';
+			// twitterIcon[0].children[1].children[0].style.color = 'rgba(57,57,58,1)';
+			overlayMenu.style.backgroundColor = 'rgba(57,57,58,1)';
 		};
 
-		head._changeColor = function(url) {
-			if (url === "/" || $location.path() === "/") {
+		head._changeColor = function() {
+			if ($location.path() === "/") {
 				titleLanding[0].style.color = "#ffffff";
+				twitterIcon[0].children[0].children[0].style.color = '#ffffff';
+				twitterIcon[0].children[1].children[0].style.color = '#ffffff';
 			}
-			if ($location.path() === "/resultados" || $location.path() === "/descargas") {
-				titleLanding[0].style.color = "#39393A";
+			if ($location.path() === "/resultados" || $location.path() === "/descargas" || $location.path() === "/mapa") {
+				titleLanding[0].style.color = "#545454";
+				twitterIcon[0].children[0].children[0].style.color = '#545454';
+				twitterIcon[0].children[1].children[0].style.color = '#545454';
 			}
-			if (url === "/mapa" || $location.path() === "/mapa") {
-				titleLanding[0].style.color = "#39393A";
-			}
+			// if (url === "/mapa" || $location.path() === "/mapa") {
+			// 	titleLanding[0].style.color = "#545454";
+			// }
 		};
 
 		head.goToView = function(url) {

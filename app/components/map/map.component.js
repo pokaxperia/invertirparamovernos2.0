@@ -100,7 +100,7 @@
 			  	autoplay: false,
 			  	draggable: false,
 			  	dots: true,
-			  	arrows:true,
+			  	arrows:false,
 			  	method: {},
 			  	event: {
 			  		init: function(){
