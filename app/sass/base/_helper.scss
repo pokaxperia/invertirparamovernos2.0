@@ -245,6 +245,10 @@
 	color: $gray-light;
 }
 
+.color-gray-smooth {
+	color: $gray-smooth !important;
+}
+
 .background-white {
 	background: $white;
 }
@@ -255,6 +259,10 @@
 
 .background-gray-light {
 	background: $gray-light;
+}
+
+.background-gray-smooth {
+	background: rgba($gray-smooth,0.25);
 }
 
 

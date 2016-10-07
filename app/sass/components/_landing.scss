@@ -42,6 +42,9 @@
 .m-landing__container-content {
 	margin: 0;
 	overflow: hidden;
+	@include respond-to('medium') {
+		letter-spacing: 2px;
+	}
 }
 
 .m-landing__container-title {
@@ -53,12 +56,26 @@
 	font-size: 35px;
 	font-weight: 400;
 	margin: 0;
+	@include respond-to('medium') {
+		font-size: 55px;
+	}
+	@include respond-to('large') {
+		font-size: 65px;
+	}
 }
 
 .m-landing__container-content {
 	font-weight: 300;
-	font-size: 20px;
+	font-size: 22px;
 	line-height: 1.5;
+	@include respond-to('medium') {
+		font-size: 26px;
+		line-height: initial;
+	}
+	@include respond-to('large') {
+		font-size: 30px;
+		line-height: initial;
+	}
 }
 
 .m-landing__container-icon i:before{
@@ -68,7 +85,7 @@
 .m-landing__container-link {
 	color: white;
 	cursor:pointer;
-	font-size: 20px;
+	font-size: 36px;
 	font-weight: 300;
 	text-decoration: underline;
 }
@@ -106,6 +123,10 @@
 	-moz-transform: translateY(45%);
 	-o-transform: translateY(45%);
 	transform: translateY(45%);
+	-moz-transition: all 500ms ease-in-out;
+	-webkit-transition: all 500ms ease-in-out;
+	-o-transition: all 500ms ease-in-out;
+	transition: all 500ms ease-in-out;
 }
 
 .m-landing__container--in-landing-intro {
@@ -119,7 +140,7 @@
 .m-landing__container-icon--in-downloads-section i:before,
 .m-landing__container-title--in-downloads-section,
 .m-landing__container-link--in-downloads-section{
-	color:  #39393A;
+	color:  $gray-dark;
 }
 
 .animation-container {
@@ -166,20 +187,13 @@
 		background-attachment: fixed;
 	}
 	.m-landing__container {
-		max-width: 70%;
+		max-width: 85%;
 		padding-left: 72px;
 		padding: 52.5px;
 	}
 	.m-landing__container-title {
 		max-width: 70%;
 		padding:  20px 0px;
-	}
-	.m-landing__container-title h1 {
-		font-size: 60px;
-	}
-	.m-landing__container-content {
-		font-size: 25px;
-		line-height: initial;
 	}
 	.m-landing__container-icon i:before{
 		font-size: 60px;
@@ -195,14 +209,7 @@
 		padding: 95px;
 	}
 	.m-landing__container-title {
-		max-width: 70%;
-	}
-	.m-landing__container-title h1 {
-		font-size: 70px;
-	}
-	.m-landing__container-content {
-		font-size: 30px;
-		line-height: initial;
+		max-width: 75%;
 	}
 	.m-landing__container-icon i:before{
 		font-size: 80px;

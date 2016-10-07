@@ -1,5 +1,5 @@
 .m-results {
-	padding: 120px 0px;
+	padding: 80px 0px;
 }
 .m-results__chart {
 	padding: 20px 0px;
@@ -14,14 +14,12 @@
 }
 
 .m-small-title--in-results-graphics {
-	color: #297373;
-	font-weight: 300;
+	color: $gray-dark;
+	font-weight: 500;
 	padding-right: 10px;
 	font-family: 'Alegreya Sans', sans-serif; 
-}
-
-@media screen and (min-width: 768px) {
-	.m-small-title--in-results-graphics {
+	@include respond-to('medium'){
 		padding-right: 20px;
 	}
 }
+

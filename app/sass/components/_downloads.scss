@@ -1,6 +1,19 @@
 .m-downloads {
 	background-color:#F6F6F6;
-	padding: 120px 0px;
+	padding: 80px 0px;
+	@include respond-to('medium') {
+		padding: 90px 0px;
+	}
+	@include respond-to('large') {
+		padding: 100px 0px;
+	}
+}
+
+.m-downloads__section {
+	margin: 35px 0px 70px;
+	@include respond-to('medium') {
+		margin: 45px 0px 90px;
+	}
 }
 
 .m-downloads__card {
@@ -12,7 +25,8 @@
 .m-downloads__card-inner {
 	-webkit-transition: box-shadow .3s;
 	background-color: white;
-	color: #888B8D;
+	color: $gray-smooth;
+	cursor: pointer;
 	display: table-cell;
 	height: 150px;
 	position: relative;
@@ -48,8 +62,26 @@
 
 .m-downloads__card-inner:hover {
 	box-shadow: 1px 0 45px rgba(0,0,0,0.2);
+}
+
+.m-downloads__section-selector:nth-child(1) .m-downloads__card-inner:hover {
+	color: $gray-dark;
+}
+
+.m-downloads__section-selector:nth-child(2) .m-downloads__card-inner:hover {
+	color: $green-dark;
+}
+
+.m-downloads__section-selector:nth-child(3) .m-downloads__card-inner:hover {
 	color: $orange;
-	cursor: pointer;
+}
+
+.m-downloads__section-selector:nth-child(4) .m-downloads__card-inner:hover {
+	color: $gray-dark;
+}
+
+.m-downloads__section-selector:nth-child(5) .m-downloads__card-inner:hover {
+	color: $green-dark;
 }
 
 .m-downloads__card-inner__content-icon i:before{

@@ -47,7 +47,7 @@
 			if (url === "/" || $location.path() === "/") {
 				titleLanding[0].style.color = "#ffffff";
 			}
-			if (url === "/resultados" || $location.path() === "/resultados") {
+			if ($location.path() === "/resultados" || $location.path() === "/descargas") {
 				titleLanding[0].style.color = "#39393A";
 			}
 			if (url === "/mapa" || $location.path() === "/mapa") {

@@ -1,19 +1,27 @@
 .m-big-title {
-	color: #39393A;
-	font-size: 48px;
+	color: $gray-smooth;
+	font-size: 36px;
+	margin: 0 auto;
+	max-width: 90%;
+	text-align:center;
+	@include respond-to('large') {
+		font-size: 48px;
+		text-align:initial;
+		max-width: initial;
+	}
 }
 
 .m-medium-title {
-	color: #39393A;
+	color: $gray-dark;
 	font-size: 24px;
 }
 
 .m-small-title {
-	color: #39393A;
+	color: $gray-dark;
 	font-size: 20px;
 }
 
 .m-paragraph {
-	color: #39393A;
+	color: $gray-dark;
 	font-size: 18px;
 }
