@@ -233,6 +233,14 @@
 	padding-bottom: 15px;
 }
 
+.uppercase {
+	text-transform:uppercase;
+} 
+
+.lowercase {
+	text-transform:lowercase;
+} 
+
 .color-white {
 	color: $white;
 }

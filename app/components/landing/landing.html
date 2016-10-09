@@ -1,7 +1,7 @@
 <section class="m-landing__intro m-landing">
 	<div class="m-landing__section  m-landing__intro-opacity"></div>
 	<div class="m-landing__container m-landing__container--in-landing-intro">
-		<div class="m-landing__container-title">
+		<div class="m-landing__container-title not-hover">
 			<h1 id="titleElement">{{$ctrl.projectTitle}}</h1>
 		</div>
 		<div class="m-landing__container-content">
@@ -17,11 +17,12 @@
 		<div class="m-landing__container-icon">
 			<i class="ipm-graphics"></i>
 		</div>
-		<div class="m-landing__container-title">
-			<h1>Gráficas generales y comparativos</h1>
+		<a ui-sref="resultados" class="m-landing__container-title m-landing__container-title--with-hover">
+			<h1>Análisis de la inversión</h1>
+			<h1>en movilidad urbana</h1>
 			<h1>2011-2015</h1>
-		</div>
-		<a ui-sref="resultados" class="m-landing__container-link">Ver resultados</a>
+		</a>
+		<!-- <a ui-sref="resultados" class="m-landing__container-link">Ver resultados</a> -->
 	</div>
 </section>
 
@@ -31,14 +32,14 @@
 		<div class="m-landing__container-icon ">
 			<i class="ipm-map"></i>
 		</div>
-		<div class="m-landing__container-title">
-			<h1>59 Zonas Metropolitanas</h1>
-		</div>
-		<a ui-sref="/mapa" class="m-landing__container-link">Explorar</a>
+		<a ui-sref="mapa" class="m-landing__container-title m-landing__container-title--with-hover">
+			<h1>Resultados por</h1>
+			<h1>zonas metropolitanas</h1>
+		</a>
 	</div>
 </section>
 
-<section class="m-landing__interactive m-landing">
+<!-- <section class="m-landing__interactive m-landing">
 	<div class="m-landing__section m-landing__interactive-opacity"></div>
 	<div class="m-landing__container animation-container slide-left">
 		<div class="m-landing__container-icon">
@@ -49,7 +50,7 @@
 		</div>
 		<a ui-sref="/interactive" class="m-landing__container-link">Conocer más</a>
 	</div>
-</section>
+</section> -->
 
 <section class="m-landing__downloads m-landing">
 	<div class="m-landing__section m-landing__downloads-opacity"></div>
@@ -57,9 +58,39 @@
 		<div class="m-landing__container-icon m-landing__container-icon--in-downloads-section">
 			<i class="ipm-download"></i>
 		</div>
-		<div class="m-landing__container-title m-landing__container-title--in-downloads-section">
-			<h1>Reportes, Bases de datos y anexos</h1>
+		<a ui-sref="descargas" class="m-landing__container-title m-landing__container-title--with-hover m-landing__container-title--in-downloads-section ">
+			<h1>Reportes,</h1>
+			<h1>Bases de datos</h1>
+			<h1>y anexos</h1>
+		</a>
+	</div>
+</section>
+<section class="m-landing m-landing__footer">
+	<div class="container">
+		<div class="m-landing__footer-row">
+			<div class="pure-g">
+				<div class="pure-u-1 pure-u-sm-12-24">
+					<div class="m-landing__footer-column">
+						Elaborado por el Instituto de Políticas para el Transporte y el Desarrollo México bajo el auspicio de la Embajada Británica en México y Fondo de Prosperidad.
+					</div>
+				</div>
+				<div class="pure-u-1 pure-u-sm-12-24">
+					<div class="m-landing__footer-column">
+						Los puntos de vista expresados en este estudio no necesariamente reflejan los del Gobierno Británico, la Embajada Británica en México o cualquier otra institución relacionada.
+					</div>
+				</div>
+			</div>
 		</div>
-		<a ui-sref="/descargas" class="m-landing__container-link m-landing__container-link--in-downloads-section">Descargas</a>
+		<div class="m-landing__footer-row">
+			<div class="pure-g">
+				<div class="pure-u-1 pure-u-sm-11-24 pure-u-md-8-24">
+					<ul class="m-landing__footer-row__logos">
+						<li><img src="./images/logo_itdp_mexico.png" alt=""></li>
+						<li><img src="./images/logo_embajada_britanica.png" alt=""></li>
+					</ul>
+				</div>
+				<div class="pure-u-1 pure-u-sm-13-24 pure-u-md-16-24"></div>
+			</div>
+		</div>
 	</div>
 </section>

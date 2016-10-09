@@ -88,7 +88,7 @@
 
 			  function _setChartData(data){
 			  	$rootScope.$emit('dataMap', data);
-			  	_sidebar.show();
+			  	
 			  	$timeout(function(){
 			  		scope.zmTitle = data.ZM;	
 			  	},0);
@@ -108,7 +108,7 @@
 			  		}
 			  	}
 			  };
-
+			  //_sidebar.show();
 
 		  	_map.addControl(_sidebar);	
 		  	}		

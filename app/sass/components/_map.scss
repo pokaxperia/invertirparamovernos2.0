@@ -44,3 +44,9 @@
   border-radius: 50%;
   background: $orange;
 }
+
+@include respond-to('large') {
+	.leaflet-sidebar {
+		width: 860px;
+	}
+}

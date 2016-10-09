@@ -19,11 +19,6 @@
 					e.stopPropagation();
 				});
 
-				// $rootScope.$on('avgDayGender', function(e, data){
-				// 	avgDayGenderChart(data);
-				// 	e.stopPropagation();
-				// });
-
 				function zmChart(data) {
 					var _zm_chart = Highcharts.chart(element[0], {
 						chart: {
