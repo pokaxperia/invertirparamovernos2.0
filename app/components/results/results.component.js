@@ -31,24 +31,24 @@
 	        type: 'column',
 	        renderTo: chartOne[0],
 	        spacingBottom: 0,
-	        spacingTop: 0,
+	        spacingTop: 10,
 	        spacingLeft: 25,
 	        spacingRight: 25,
 	    },
 	    title: {
-	        text: 'Stacked column chart'
+	        text: ''
 	    },
 	    xAxis: {
-	        categories: ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas']
+	        categories: ['2011', '2012', '2013', '2014', '2014']
 	    },
 	    yAxis: {
 	        min: 0,
 	        title: {
-	            text: 'Total fruit consumption'
+	            text: ''
 	        }
 	    },
 	    tooltip: {
-	        pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b> ({point.percentage:.0f}%)<br/>',
+	        pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.percentage:.0f}%</b><br/>',
 	        shared: true
 	    },
 	    plotOptions: {
@@ -57,14 +57,11 @@
 	        }
 	    },
 	    series: [{
-	        name: 'John',
-	        data: [5, 3, 4, 7, 2]
-	    }, {
-	        name: 'Jane',
-	        data: [2, 2, 3, 2, 1]
-	    }, {
-	        name: 'Joe',
-	        data: [3, 4, 4, 2, 5]
+	        name: 'Otros',
+	        data: [65,	54,	63,	54,	68]
+	    },{
+	        name: 'Movilidad',
+	        data: [35,	46,	37,	46,	32]
 	    }]
 		});
 
