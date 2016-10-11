@@ -8,10 +8,6 @@
 		templateUrl: './components/downloads/downloads.html', 
 		controller: DownloadsCtrl,
 		replace:false,
-		bindings: {
-			isLoadingView: '@?bind',
-			isMenuOpen: '@?bind',
-		}
 	};
 
 	var overlayMenu = null;
@@ -22,8 +18,6 @@
 
 	function DownloadsCtrl(){
 		var dwlds = this;
-		console.log(isMenuOpen)
-		console.log(dwlds.isMenuOpenmsg)
 
 	}
 	

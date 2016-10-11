@@ -91,33 +91,33 @@
 		];
 
 		ctrl.$onInit = function() {
-			$interval.cancel(_timmingFunction);
-			_timmingFunction = undefined;
-			ctrl.projectTitle = undefined;
-			_currentStringIndex = 0;
+			// $interval.cancel(_timmingFunction);
+			// _timmingFunction = undefined;
+			// ctrl.projectTitle = undefined;
+			// _currentStringIndex = 0;
 
-			ctrl.projectTitle = _titleProject[_currentStringIndex];
-			ctrl.projectContent = _contentProject[_currentStringIndex];
-			_timmingFunction = $interval(_setContentInterval, 8000);
+			// ctrl.projectTitle = _titleProject[_currentStringIndex];
+			// ctrl.projectContent = _contentProject[_currentStringIndex];
+			// _timmingFunction = $interval(_setContentInterval, 8000);
 		};
 
-		function _setContentInterval() {
-			_titleElement[0].animate(_title_animation, _timming);
-			_contentElement[0].animate(_content_animation, _timming);
-			_changeContent();
-		}
+		// function _setContentInterval() {
+		// 	_titleElement[0].animate(_title_animation, _timming);
+		// 	_contentElement[0].animate(_content_animation, _timming);
+		// 	_changeContent();
+		// }
 
-		function _changeContent() {
-			$timeout(function(){
-				_currentStringIndex = (_currentStringIndex + 1) % _titleProject.length;
-				_currentStringIndex = (_currentStringIndex + 1) % _contentProject.length;
-				ctrl.projectTitle = _titleProject[_currentStringIndex];
-				ctrl.projectContent = _contentProject[_currentStringIndex];
-			}, 500);
+		// function _changeContent() {
+		// 	$timeout(function(){
+		// 		_currentStringIndex = (_currentStringIndex + 1) % _titleProject.length;
+		// 		_currentStringIndex = (_currentStringIndex + 1) % _contentProject.length;
+		// 		ctrl.projectTitle = _titleProject[_currentStringIndex];
+		// 		ctrl.projectContent = _contentProject[_currentStringIndex];
+		// 	}, 500);
 
-			$interval.cancel(_timmingFunction);
-			_timmingFunction = $interval(_setContentInterval, 8000);
-		}
+		// 	$interval.cancel(_timmingFunction);
+		// 	_timmingFunction = $interval(_setContentInterval, 8000);
+		// }
 	}
 	
 	angular

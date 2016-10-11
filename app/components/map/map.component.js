@@ -72,6 +72,7 @@
 				function zoomToFeatureZM(e) {
 					_map.fitBounds(e.target.getBounds());
 					_setChartData(e.target.feature.properties.informacion);
+					_sidebar.show();
 				}
 
 			  function onEachFeatureZm(feature, layer) {
@@ -108,7 +109,6 @@
 			  		}
 			  	}
 			  };
-			  //_sidebar.show();
 
 		  	_map.addControl(_sidebar);	
 		  	}		

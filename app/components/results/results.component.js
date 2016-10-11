@@ -260,43 +260,106 @@
 		});
 
 		Highcharts.chart({
-			chart: {
-				type: 'column',
-				renderTo: chartFive[0],
-					spacingBottom: 0,
-					spacingTop: 10,
-					spacingLeft: 25,
-					spacingRight: 25,
-				 },
-				 title: {
-						 text: ''
-				 },
-				 xAxis: {
-						 categories: ['Transporte Público', 'Bicicleta, caminata (espacio público)', 'Automóvil, taxi y otros'],
-						 title: {
-								 text: null
-						 }
-				 },
-				 yAxis: {
-						 min: 0,
-						 title: {
-								 text: ''
-						 },
-						 labels: {
-								 overflow: 'justify'
-						 }
-				 },
-				 tooltip: {
-						 shared: true
-				 },
-
-				 series: [{
-						 name: 'Viajes al trabajo',
-						 data: [45, 24, 31]
-				 }, {
-						 name: 'Inversión',
-						 data: [0, 14, 85]
-				 }]
+				chart: {
+            type: 'bar',
+            renderTo: chartFive[0],
+          	spacingBottom: 0,
+          	spacingTop: 10,
+          	spacingLeft: 5,
+          	spacingRight: 15,
+          	height: 1500
+        },
+        title: {
+            text: ''
+        },
+        xAxis: {
+            categories: [
+            'Aguascalientes',
+            'Acapulco',
+            'Acayucan',
+            'Cancún',
+            'Celaya',
+            'Chihuahua',
+            'Coatzacoalcos',
+            'Colima-Villa de Álvarez',
+            'Córdoba',
+            'Coyuca de Benítez',
+            'Cuautla',
+            'Cuernavaca',
+            'Guadalajara',
+            'Guaymas',
+            'Juárez',
+            'La Laguna',
+            'La Piedad-Pénjamo',
+            'León',
+            'Matamoros',
+            'Mérida',
+            'Mexicali',
+            'Minatitlán',
+            'Monclova-Frontera',
+            'Monterrey',
+            'Morelia',
+            'Moroleón-Uriangato',
+            'Nuevo Laredo',
+            'Oaxaca',
+            'Ocotlán',
+            'Orizaba',
+            'Pachuca',
+            'Poza Rica',
+            'Puebla-Tlaxcala',
+            'Puerto Vallarta',
+            'Querétaro',
+            'Reynosa-Río Bravo',
+            'Rioverde-Ciudad Fernández',
+            'Saltillo',
+            'San Francisco del Rincón',
+            'San Luis Potosí-Soledad de Graciano Sánchez',
+            'Tampico',
+            'Tecomán',
+            'Tehuacán',
+            'Tehuantepec',
+            'Tepic',
+            'Teziutlán',
+            'Tianguistenco',
+            'TIJUANA',
+            'Tlaxcala-Apizaco',
+            'Toluca',
+            'Tula',
+            'Tulancingo',
+            'Tuxtla Gutiérrez',
+            'Valle de México',
+            'Veracruz',
+            'Villahermosa',
+            'Xalapa',
+            'Zacatecas-Guadalupe',
+            'Zamora-Jacona'
+            ]
+        },
+        yAxis: {
+            min: 0,
+            max:100,
+            title: {
+                text: ''
+            }
+        },
+        legend: {
+            reversed: true
+        },
+        plotOptions: {
+            series: {
+                stacking: 'normal'
+            }
+        },
+        series: [
+	        {
+	          name: 'Otros',
+	          data: [48, 0, 24, 20, 22, 14, 30, 17, 53, 17, 13, 46, 48, 20, 52, 34, 39, 33, 9, 50, 49, 35, 13, 28, 27, 36, 14, 93, 20, 24, 34, 28, 65, 37, 33, 30, 17, 52, 24, 17, 43, 15, 39, 26, 2, 22, 15, 8, 51, 20, 25, 34, 29, 35, 29, 15, 39, 37, 26]
+	        },
+	        {
+	          name: 'Movilidad',
+	          data: [52,100,76,80,78,86,70,83,47,83,87,54,52,80,48,66,61,67,91,50,51,65,87,72,73,64,86,7,80,76,66,72,35,63,67,70,83,48,76,83,57,85,61,74,98,78,85,92,49,80,75,66,71,65,71,85,61,63,74]
+	        }
+        ]
 		});
 
 

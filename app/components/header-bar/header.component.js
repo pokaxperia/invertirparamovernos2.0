@@ -27,10 +27,7 @@
 		twitterIcon = angular.element(document.getElementById('social'));
 		titleLanding = angular.element(document.getElementById('titleLanding'));
 
-		overlayMenu = $element[0].children[2];
-		//random_class = ['rgba(57,57,58,1)','rgba(41,115,115,1)','rgba(122,158,159,1)','rgba(136, 139, 141, 1)'];
-		//random_class = ['rgba(57,57,58,1)','rgba(136, 139, 141, 1)'];
-		//isRandomPath = random_class[Math.floor(Math.random()*random_class.length)];
+		overlayMenu = $element[0].children[1];
 
 		head.$onInit = function() {
 			head._changeColor();
@@ -39,25 +36,18 @@
 			});
 			
 			menuButton[0].style.backgroundColor = 'rgba(57,57,58,1)';
-			// twitterIcon[0].children[0].children[0].style.color = 'rgba(57,57,58,1)';
-			// twitterIcon[0].children[1].children[0].style.color = 'rgba(57,57,58,1)';
 			overlayMenu.style.backgroundColor = 'rgba(57,57,58,1)';
 		};
 
 		head._changeColor = function() {
 			if ($location.path() === "/") {
-				titleLanding[0].style.color = "#ffffff";
 				twitterIcon[0].children[0].children[0].style.color = '#ffffff';
 				twitterIcon[0].children[1].children[0].style.color = '#ffffff';
 			}
 			if ($location.path() === "/resultados" || $location.path() === "/descargas" || $location.path() === "/mapa") {
-				titleLanding[0].style.color = "#545454";
 				twitterIcon[0].children[0].children[0].style.color = '#545454';
 				twitterIcon[0].children[1].children[0].style.color = '#545454';
 			}
-			// if (url === "/mapa" || $location.path() === "/mapa") {
-			// 	titleLanding[0].style.color = "#545454";
-			// }
 		};
 
 		head.goToView = function(url) {
@@ -66,17 +56,12 @@
 			$timeout(function() {
 				head.isMenuOpen = false;
 			}, 2000);
-			
-			//head.isMenuOpen !== true ? head.isMenuOpen = true: head.isMenuOpen = false;
+
 		}
 
 		head.openMenu = function() {
 			head.isMenuOpen !== true ? head.isMenuOpen = true: head.isMenuOpen = false;
 		};
-		
-		//twitterIcon[0].style.color = isRandomPath;
-		// facebookIcon.style.color = isRandomPath;
-		// menuButton.style.backgroundColor = isRandomPath;
 
 	}
 	
@@ -84,8 +69,5 @@
 	.module('ipm')
 	.component('headerBar', headerBar);
 	HeaderCtrl.$inject = ["$rootScope", "$window", "$timeout", "$location", "$element", "$attrs", "uiService"];
-
-	// landingController.$inject = ['$window', '$timeout'];
-	// angular.module('ipm').directive('landingController', landingController);
 
 })();
