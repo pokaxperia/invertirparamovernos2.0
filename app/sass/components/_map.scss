@@ -39,10 +39,18 @@
 	color: $gray-smooth !important;
 }
 
-.slick-dots li button:before {
-  content: '';
-  border-radius: 50%;
-  background: $orange;
+.slick-dots {
+	bottom: -50px;
+	li {
+		margin: 0px 15px;
+		button:before {
+		  content: '';
+		  border-radius: 0%;
+		  background: $gray-dark;
+			width: 25px;
+			height: 5px;
+		}
+	}
 }
 
 // @include respond-to('large') {

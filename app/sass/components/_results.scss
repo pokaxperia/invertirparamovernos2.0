@@ -1,5 +1,12 @@
 .m-results {
+	background-color:#F6F6F6;
 	padding: 80px 0px;
+	@include respond-to('medium') {
+		padding: 90px 0px;
+	}
+	@include respond-to('large') {
+		padding: 100px 0px;
+	}
 }
 .m-results__chart {
 	padding: 20px 0px;
@@ -16,10 +23,10 @@
 .m-small-title--in-results-graphics {
 	color: $gray-dark;
 	font-weight: 500;
-	padding-right: 10px;
+	// padding-right: 10px;
 	font-family: 'Alegreya Sans', sans-serif; 
-	@include respond-to('medium'){
-		padding-right: 20px;
-	}
+	// @include respond-to('medium'){
+	// 	padding-right: 20px;
+	// }
 }
 
