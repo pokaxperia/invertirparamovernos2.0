@@ -23,9 +23,14 @@
 	var chartSixThree = null;
 	var chartSixFour = null;
 	var chartSixFive = null;
+	var chartSevenOne = null;
+	var chartSevenTwo = null;
+	var chartSevenThree = null;
+	var chartSevenFour = null;
+	var chartSevenFive = null;
 
 
-	function ResultsCtrl($window, $timeout, $location, $element, $attrs, modalService){
+	function ResultsCtrl(_, $window, $timeout, $location, $element, $attrs, modalService){
 		var relt = this;
 
 		chartOne = angular.element(document.getElementById('chartOne'));
@@ -39,6 +44,12 @@
 		chartSixFour = angular.element(document.getElementById('chartSix__four'));
 		chartSixFive = angular.element(document.getElementById('chartSix__five'));
 
+		chartSevenOne = angular.element(document.getElementById('chartSeven__one'));
+		chartSevenTwo = angular.element(document.getElementById('chartSeven__two'));
+		chartSevenThree = angular.element(document.getElementById('chartSeven__three'));
+		chartSevenFour = angular.element(document.getElementById('chartSeven__four'));
+		chartSevenFive = angular.element(document.getElementById('chartSeven__five'));
+
 		Highcharts.chart({
 			chart: {
 					type: 'column',
@@ -47,6 +58,7 @@
 					spacingTop: 50,
 					spacingLeft: 25,
 					spacingRight: 25,
+					height: 600
 			},
 			title: {
 					text: ''
@@ -57,7 +69,7 @@
 			yAxis: {
 					min: 0,
 					title: {
-							text: ''
+							text: 'Porcentajes'
 					}
 			},
 			tooltip: {
@@ -86,6 +98,7 @@
 					spacingTop: 50,
 					spacingLeft: 25,
 					spacingRight: 25,
+					height: 600
 			},
 			title: {
 					text: ''
@@ -96,11 +109,11 @@
 			yAxis: {
 					min: 0,
 					title: {
-							text: ''
+							text: 'Porcentajes'
 					}
 			},
 			tooltip: {
-					pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b> ({point.percentage:.0f}%)<br/>',
+					pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.percentage:.0f}%</b><br/>',
 					shared: true
 			},
 			plotOptions: {
@@ -145,6 +158,7 @@
 					spacingTop: 50,
 					spacingLeft: 25,
 					spacingRight: 25,
+					height: 600
 				},
 				title: {
 						text: ''
@@ -203,6 +217,7 @@
 					spacingTop: 50,
 					spacingLeft: 25,
 					spacingRight: 25,
+					height: 600
 				},
 				title: {
 						text: ''
@@ -280,6 +295,7 @@
 				spacingTop: 50,
 				spacingLeft: 25,
 				spacingRight: 25,
+				height: 500
 			 },
 			 title: {
 					 text: ''
@@ -293,7 +309,7 @@
 			 yAxis: {
 					 min: 0,
 					 title: {
-							 text: ''
+							 text: 'Porcentajes'
 					 },
 					 labels: {
 							 overflow: 'justify'
@@ -312,6 +328,7 @@
 			 }]
 		});
 
+		/* Graphic Six */
 		Highcharts.chart({
 				chart: {
 					type: 'bar',
@@ -320,10 +337,14 @@
 					spacingTop: 50,
 					spacingLeft: 25,
 					spacingRight: 25,
-					height: 975
+					height: 1000
 				},
 				title: {
-						text: 'Año 2011'
+						text: '2011'
+				},
+				tooltip: {
+						pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.percentage:.0f}%</b><br/>',
+						shared: true
 				},
 				xAxis: {
 						categories: [
@@ -423,10 +444,14 @@
 					spacingTop: 50,
 					spacingLeft: 25,
 					spacingRight: 25,
-					height: 975
+					height: 1000
 				},
 				title: {
-						text: 'Año 2012'
+						text: '2012'
+				},
+				tooltip: {
+						pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.percentage:.0f}%</b><br/>',
+						shared: true
 				},
 				xAxis: {
 					categories: [
@@ -526,10 +551,14 @@
 				spacingTop: 50,
 				spacingLeft: 25,
 				spacingRight: 25,
-				height: 975
+				height: 1000
 			},
 			title: {
-					text: 'Año 2013'
+					text: '2013'
+			},
+			tooltip: {
+					pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.percentage:.0f}%</b><br/>',
+					shared: true
 			},
 			xAxis: {
 				categories: [
@@ -629,10 +658,14 @@
 				spacingTop: 50,
 				spacingLeft: 25,
 				spacingRight: 25,
-				height: 975
+				height: 1000
 			},
 			title: {
-					text: 'Año 2014'
+					text: '2014'
+			},
+			tooltip: {
+					pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.percentage:.0f}%</b><br/>',
+					shared: true
 			},
 			xAxis: {
 				categories: [
@@ -732,10 +765,14 @@
 				spacingTop: 50,
 				spacingLeft: 25,
 				spacingRight: 25,
-				height: 975
+				height: 1000
 			},
 			title: {
-					text: 'Año 2015'
+					text: '2015'
+			},
+			tooltip: {
+					pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.percentage:.0f}%</b><br/>',
+					shared: true
 			},
 			xAxis: {
 				categories: [
@@ -827,15 +864,580 @@
 			]
 		});
 
-		relt.slickResultsConfig = {
+		/* Graphic Seven */
+		Highcharts.chart({
+				chart: {
+					type: 'bar',
+					renderTo: chartSevenOne[0],
+					spacingBottom: 25,
+					spacingTop: 50,
+					spacingLeft: 25,
+					spacingRight: 25,
+					height: 1000
+				},
+				title: {
+						text: '2015'
+				},
+				tooltip: {
+						pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.percentage:.0f}%</b><br/>',
+						shared: true
+				},
+				xAxis: {
+						categories: [
+							'Acapulco',
+							'Acayucan',
+							'Aguascalientes',
+							'Cancún',
+							'Celaya',
+							'Chihuahua',
+							'Coatzacoalcos',
+							'Colima-Villa de Álvarez',
+							'Córdoba',
+							'Coyuca de Benítez',
+							'Cuautla',
+							'Cuernavaca',
+							'Guadalajara',
+							'Guaymas',
+							'Juárez',
+							'La Laguna',
+							'La Piedad-Pénjamo',
+							'León',
+							'Matamoros',
+							'Mérida',
+							'Mexicali',
+							'Minatitlán',
+							'Monclova-Frontera',
+							'Monterrey',
+							'Morelia',
+							'Moroleón-Uriangato',
+							'Nuevo Laredo',
+							'Oaxaca',
+							'Ocotlán',
+							'Orizaba',
+							'Pachuca',
+							'Poza Rica',
+							'Puebla-Tlaxcala',
+							'Puerto Vallarta',
+							'Querétaro',
+							'Reynosa-Río Bravo',
+							'Rioverde-Ciudad Fernández',
+							'Saltillo',
+							'San Francisco del Rincón',
+							'San Luis Potosí',
+							'Tampico',
+							'Tecomán',
+							'Tehuacán',
+							'Tehuantepec',
+							'Tepic',
+							'Teziutlán',
+							'Tianguistenco',
+							'TIJUANA',
+							'Tlaxcala-Apizaco',
+							'Toluca',
+							'Tula',
+							'Tulancingo',
+							'Tuxtla Gutiérrez',
+							'Valle de México',
+							'Veracruz',
+							'Villahermosa',
+							'Xalapa',
+							'Zacatecas-Guadalupe',
+							'Zamora-Jacona'
+						]
+				},
+				yAxis: {
+						min: 0,
+						max:100,
+						title: {
+								text: ''
+						}
+				},
+				legend: {
+						reversed: true
+				},
+				plotOptions: {
+						series: {
+								stacking: 'normal'
+						}
+				},
+				series: [
+					{
+						name: 'Auto',
+						data: [97,100,90,86,93,87,88,78,82,98,89,84,92,98,99,81,99,73,34,81,100,97,83,73,71,78,60,3,85,92,40,78,82,34,84,61,100,96,88,84,73,21,78,98,91,100,79,96,46,87,91,88,99,78,39,57,92,89,90]
+					},
+					{
+						name: 'MUS',
+						data: [3,0,10,14,7,13,12,22,18,2,11,16,8,2,1,19,1,27,66,19,0,3,17,27,29,22,40,97,15,8,60,22,18,66,16,39,0,4,12,16,27,79,22,2,9,0,21,4,54,13,9,12,1,22,61,43,8,11,10]
+					}
+				]
+		});
+
+		Highcharts.chart({
+				chart: {
+					type: 'bar',
+					renderTo: chartSevenTwo[0],
+					spacingBottom: 25,
+					spacingTop: 50,
+					spacingLeft: 25,
+					spacingRight: 25,
+					height: 1000
+				},
+				title: {
+						text: '2012'
+				},
+				tooltip: {
+						pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.percentage:.0f}%</b><br/>',
+						shared: true
+				},
+				xAxis: {
+					categories: [
+						'Acapulco',
+						'Acayucan',
+						'Aguascalientes',
+						'Cancún',
+						'Celaya',
+						'Chihuahua',
+						'Coatzacoalcos',
+						'Colima-Villa de Álvarez',
+						'Córdoba',
+						'Coyuca de Benítez',
+						'Cuautla',
+						'Cuernavaca',
+						'Guadalajara',
+						'Guaymas',
+						'Juárez',
+						'La Laguna',
+						'La Piedad-Pénjamo',
+						'León',
+						'Matamoros',
+						'Mérida',
+						'Mexicali',
+						'Minatitlán',
+						'Monclova-Frontera',
+						'Monterrey',
+						'Morelia',
+						'Moroleón-Uriangato',
+						'Nuevo Laredo',
+						'Oaxaca',
+						'Ocotlán',
+						'Orizaba',
+						'Pachuca',
+						'Poza Rica',
+						'Puebla-Tlaxcala',
+						'Puerto Vallarta',
+						'Querétaro',
+						'Reynosa-Río Bravo',
+						'Rioverde-Ciudad Fernández',
+						'Saltillo',
+						'San Francisco del Rincón',
+						'San Luis Potosí',
+						'Tampico',
+						'Tecomán',
+						'Tehuacán',
+						'Tehuantepec',
+						'Tepic',
+						'Teziutlán',
+						'Tianguistenco',
+						'TIJUANA',
+						'Tlaxcala-Apizaco',
+						'Toluca',
+						'Tula',
+						'Tulancingo',
+						'Tuxtla Gutiérrez',
+						'Valle de México',
+						'Veracruz',
+						'Villahermosa',
+						'Xalapa',
+						'Zacatecas-Guadalupe',
+						'Zamora-Jacona'
+					]
+				},
+				yAxis: {
+						min: 0,
+						max:100,
+						title: {
+								text: ''
+						}
+				},
+				legend: {
+						reversed: true
+				},
+				plotOptions: {
+						series: {
+								stacking: 'normal'
+						}
+				},
+				series: [
+					{
+						name: 'Auto',
+						data: [90,100,85,90,90,93,44,73,93,80,88,95,89,96,96,86,93,76,41,96,88,95,92,71,82,56,87,98,81,78,58,63,73,31,79,51,98,86,87,67,70,3,60,86,97,97,93,76,55,95,91,92,97,51,21,68,54,57,100]
+					},
+					{
+						name: 'MUS',
+						data: [10,0,15,10,10,7,56,27,7,20,12,5,11,4,4,14,7,24,59,4,12,5,8,29,18,44,13,2,19,22,42,37,27,69,21,49,2,14,13,33,30,97,40,14,3,3,7,24,45,5,9,8,3,49,79,32,46,43,0]
+					}
+				]
+		});
+
+		Highcharts.chart({
+			chart: {
+				type: 'bar',
+				renderTo: chartSevenThree[0],
+				spacingBottom: 25,
+				spacingTop: 50,
+				spacingLeft: 25,
+				spacingRight: 25,
+				height: 1000
+			},
+			title: {
+					text: '2013'
+			},
+			tooltip: {
+					pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.percentage:.0f}%</b><br/>',
+					shared: true
+			},
+			xAxis: {
+				categories: [
+					'Acapulco',
+					'Acayucan',
+					'Aguascalientes',
+					'Cancún',
+					'Celaya',
+					'Chihuahua',
+					'Coatzacoalcos',
+					'Colima-Villa de Álvarez',
+					'Córdoba',
+					'Coyuca de Benítez',
+					'Cuautla',
+					'Cuernavaca',
+					'Guadalajara',
+					'Guaymas',
+					'Juárez',
+					'La Laguna',
+					'La Piedad-Pénjamo',
+					'León',
+					'Matamoros',
+					'Mérida',
+					'Mexicali',
+					'Minatitlán',
+					'Monclova-Frontera',
+					'Monterrey',
+					'Morelia',
+					'Moroleón-Uriangato',
+					'Nuevo Laredo',
+					'Oaxaca',
+					'Ocotlán',
+					'Orizaba',
+					'Pachuca',
+					'Poza Rica',
+					'Puebla-Tlaxcala',
+					'Puerto Vallarta',
+					'Querétaro',
+					'Reynosa-Río Bravo',
+					'Rioverde-Ciudad Fernández',
+					'Saltillo',
+					'San Francisco del Rincón',
+					'San Luis Potosí',
+					'Tampico',
+					'Tecomán',
+					'Tehuacán',
+					'Tehuantepec',
+					'Tepic',
+					'Teziutlán',
+					'Tianguistenco',
+					'TIJUANA',
+					'Tlaxcala-Apizaco',
+					'Toluca',
+					'Tula',
+					'Tulancingo',
+					'Tuxtla Gutiérrez',
+					'Valle de México',
+					'Veracruz',
+					'Villahermosa',
+					'Xalapa',
+					'Zacatecas-Guadalupe',
+					'Zamora-Jacona'
+				]
+			},
+			yAxis: {
+					min: 0,
+					max:100,
+					title: {
+							text: ''
+					}
+			},
+			legend: {
+					reversed: true
+			},
+			plotOptions: {
+					series: {
+							stacking: 'normal'
+					}
+			},
+			series: [
+				{
+					name: 'Auto',
+					data: [60,67,65,94,92,81,78,69,84,94,87,81,96,81,89,100,98,97,72,73,100,100,81,86,78,55,95,66,61,74,50,89,81,100,82,84,96,84,96,91,88,73,91,100,89,97,86,80,93,83,88,87,91,45,100,67,86,97,91]
+				},
+				{
+					name: 'MUS',
+					data: [40,33,35,6,8,19,22,31,16,6,13,19,4,19,11,0,2,3,28,27,0,0,19,14,22,45,5,34,39,26,50,11,19,0,18,16,4,16,4,9,12,27,9,0,11,3,14,20,7,17,12,13,9,55,0,33,14,3,9]
+				}
+			]
+		});
+
+		Highcharts.chart({
+			chart: {
+				type: 'bar',
+				renderTo: chartSevenFour[0],
+				spacingBottom: 25,
+				spacingTop: 50,
+				spacingLeft: 25,
+				spacingRight: 25,
+				height: 1000
+			},
+			title: {
+					text: '2014'
+			},
+			tooltip: {
+					pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.percentage:.0f}%</b><br/>',
+					shared: true
+			},
+			xAxis: {
+				categories: [
+					'Acapulco',
+					'Acayucan',
+					'Aguascalientes',
+					'Cancún',
+					'Celaya',
+					'Chihuahua',
+					'Coatzacoalcos',
+					'Colima-Villa de Álvarez',
+					'Córdoba',
+					'Coyuca de Benítez',
+					'Cuautla',
+					'Cuernavaca',
+					'Guadalajara',
+					'Guaymas',
+					'Juárez',
+					'La Laguna',
+					'La Piedad-Pénjamo',
+					'León',
+					'Matamoros',
+					'Mérida',
+					'Mexicali',
+					'Minatitlán',
+					'Monclova-Frontera',
+					'Monterrey',
+					'Morelia',
+					'Moroleón-Uriangato',
+					'Nuevo Laredo',
+					'Oaxaca',
+					'Ocotlán',
+					'Orizaba',
+					'Pachuca',
+					'Poza Rica',
+					'Puebla-Tlaxcala',
+					'Puerto Vallarta',
+					'Querétaro',
+					'Reynosa-Río Bravo',
+					'Rioverde-Ciudad Fernández',
+					'Saltillo',
+					'San Francisco del Rincón',
+					'San Luis Potosí',
+					'Tampico',
+					'Tecomán',
+					'Tehuacán',
+					'Tehuantepec',
+					'Tepic',
+					'Teziutlán',
+					'Tianguistenco',
+					'TIJUANA',
+					'Tlaxcala-Apizaco',
+					'Toluca',
+					'Tula',
+					'Tulancingo',
+					'Tuxtla Gutiérrez',
+					'Valle de México',
+					'Veracruz',
+					'Villahermosa',
+					'Xalapa',
+					'Zacatecas-Guadalupe',
+					'Zamora-Jacona'
+				]
+			},
+			yAxis: {
+					min: 0,
+					max:100,
+					title: {
+							text: ''
+					}
+			},
+			legend: {
+					reversed: true
+			},
+			plotOptions: {
+					series: {
+							stacking: 'normal'
+					}
+			},
+			series: [
+				{
+					name: 'Auto',
+					data: [98,95,81,17,96,86,93,54,82,92,95,84,100,100,92,100,99,98,33,83,97,100,46,95,90,90,96,0,98,97,38,87,93,100,93,95,82,96,98,77,98,70,100,100,93,91,89,81,96,92,88,95,94,59,100,88,96,87,97]
+				},
+				{
+					name: 'MUS',
+					data: [2,5,19,83,4,14,7,46,18,8,5,16,0,0,8,0,1,2,67,17,3,0,54,5,10,10,4,100,2,3,62,13,7,0,7,5,18,4,2,23,2,30,0,0,7,9,11,19,4,8,12,5,6,41,0,12,4,13,3]
+				}
+			]
+		});
+
+		Highcharts.chart({
+			chart: {
+				type: 'bar',
+				renderTo: chartSevenFive[0],
+				spacingBottom: 25,
+				spacingTop: 50,
+				spacingLeft: 25,
+				spacingRight: 25,
+				height: 1000
+			},
+			title: {
+					text: '2015'
+			},
+			tooltip: {
+					pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.percentage:.0f}%</b><br/>',
+					shared: true
+			},
+			xAxis: {
+				categories: [
+					'Aguascalientes',
+					'Acapulco',
+					'Acayucan',
+					'Cancún',
+					'Celaya',
+					'Chihuahua',
+					'Coatzacoalcos',
+					'Colima-Villa de Álvarez',
+					'Córdoba',
+					'Coyuca de Benítez',
+					'Cuautla',
+					'Cuernavaca',
+					'Guadalajara',
+					'Guaymas',
+					'Juárez',
+					'La Laguna',
+					'La Piedad-Pénjamo',
+					'León',
+					'Matamoros',
+					'Mérida',
+					'Mexicali',
+					'Minatitlán',
+					'Monclova-Frontera',
+					'Monterrey',
+					'Morelia',
+					'Moroleón-Uriangato',
+					'Nuevo Laredo',
+					'Oaxaca',
+					'Ocotlán',
+					'Orizaba',
+					'Pachuca',
+					'Poza Rica',
+					'Puebla-Tlaxcala',
+					'Puerto Vallarta',
+					'Querétaro',
+					'Reynosa-Río Bravo',
+					'Rioverde-Ciudad Fernández',
+					'Saltillo',
+					'San Francisco del Rincón',
+					'San Luis Potosí-Soledad de Graciano Sánchez',
+					'Tampico',
+					'Tecomán',
+					'Tehuacán',
+					'Tehuantepec',
+					'Tepic',
+					'Teziutlán',
+					'Tianguistenco',
+					'TIJUANA',
+					'Tlaxcala-Apizaco',
+					'Toluca',
+					'Tula',
+					'Tulancingo',
+					'Tuxtla Gutiérrez',
+					'Valle de México',
+					'Veracruz',
+					'Villahermosa',
+					'Xalapa',
+					'Zacatecas-Guadalupe',
+					'Zamora-Jacona'
+				 ]
+			},
+			yAxis: {
+					min: 0,
+					max:100,
+					title: {
+							text: ''
+					}
+			},
+			legend: {
+					reversed: true
+			},
+			plotOptions: {
+					series: {
+							stacking: 'normal'
+					}
+			},
+			series: [
+				{
+					name: 'Auto',
+					data: [41,54,89,70,72,100,49,100,58,100,62,70,78,78,90,80,74,74,92,87,100,50,100,90,75,81,100,67,79,49,72,61,65,71,89,80,74,82,70,80,72,71,48,54,79,37,64,91,63,69,69,65,67,65,70,71,67,96,71]
+				},
+				{
+					name: 'MUS',
+					data: [59,46,11,30,28,0,51,0,42,0,38,30,22,22,10,20,26,26,8,13,0,50,0,10,25,19,0,33,21,51,28,39,35,29,11,20,26,18,30,20,28,29,52,46,21,63,36,9,37,31,31,35,33,35,30,29,33,4,29]
+				}
+			]
+		});
+
+		relt.slickGraphicSixConfig = {
 			enabled: true,
 			autoplay: true,
-			autoplaySpeed: 3000,
+			customPaging : function(slider, i) {
+				var years = [2011,2012,2013,2014,2015];
+				return '<a>'+years[i]+'</a>';
+			},
+			autoplaySpeed: 5000,
 			draggable: false,
 			infinite:true,
 			pauseOnHover: true,
 			dots: true,
 			arrows:true,
+			nextArrow: '<button class="custom-next-button"><i class="ipm-next"></i></button>',
+			prevArrow: '<button class="custom-prev-button"><i class="ipm-previous"></i></button>',
+			method: {},
+			event: {
+				init: function(){
+					
+				}
+			}
+		};
+
+		relt.slickGraphicSevenConfig = {
+			enabled: true,
+			autoplay: true,
+			customPaging : function(slider, i) {
+				var years = [2011,2012,2013,2014,2015];
+				return '<a>'+years[i]+'</a>';
+			},
+			autoplaySpeed: 5000,
+			draggable: false,
+			infinite:true,
+			pauseOnHover: true,
+			dots: true,
+			arrows:true,
+			nextArrow: '<button class="custom-next-button"><i class="ipm-next"></i></button>',
+			prevArrow: '<button class="custom-prev-button"><i class="ipm-previous"></i></button>',
 			method: {},
 			event: {
 				init: function(){
@@ -916,6 +1518,6 @@
 	angular
 	.module('ipm')
 	.component('results', results);
-	ResultsCtrl.$inject = ["$window", "$timeout", "$location", "$element", "$attrs", "modalService"];
+	ResultsCtrl.$inject = ["_","$window", "$timeout", "$location", "$element", "$attrs", "modalService"];
 
 })();
