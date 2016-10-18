@@ -232,10 +232,11 @@
 .m-landing__footer-row__logos {
 	display:block;
 	margin: 0;
-	padding: 0px;
+	padding: 10px 0px 30px;
 	text-align:center;
 	@include respond-to('medium') {
 		display: table-cell;
+		padding: 0px;
 	}
 	li {
 		display:inline-block;
@@ -249,6 +250,13 @@
 		img{
 			width: 100px;
 		}
+	}
+}
+
+.cc-logo {
+	margin: 0 auto;
+	@include respond-to('medium') {
+		margin: initial;
 	}
 }
 
