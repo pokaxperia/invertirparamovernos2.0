@@ -29,10 +29,10 @@
 					attribution: '<a href="http://www.mapbox.com/about/maps/" target="_blank">Terms &amp; Feedback</a>'
 				}).addTo(_map);
 
-				var _sidebar = L.control.sidebar('sidebar', {
-				    position: 'left',
-				    closeButton: true
-				});
+				// var _sidebar = L.control.sidebar('sidebar', {
+				//     position: 'left',
+				//     closeButton: true
+				// });
 
 		  	var _zmGeoJson = L.geoJson(zmData, {
 		  		style: styleZM,
@@ -72,7 +72,7 @@
 				function zoomToFeatureZM(e) {
 					_map.fitBounds(e.target.getBounds());
 					_setChartData(e.target.feature.properties.informacion);
-					_sidebar.show();
+					//_sidebar.show();
 				}
 
 			  function onEachFeatureZm(feature, layer) {
@@ -102,6 +102,11 @@
 			  	draggable: false,
 			  	dots: true,
 			  	arrows:false,
+			  	customPaging : function(slider, i) {
+			  		var years = ["Infraestructura", "Año", "Viajes a la escuela"];
+			  		return '<a>'+years[i]+'</a>';
+			  	},
+			  	dotsClass: 'slick-dots map-dots',
 			  	method: {},
 			  	event: {
 			  		init: function(){
@@ -110,7 +115,7 @@
 			  	}
 			  };
 
-		  	_map.addControl(_sidebar);	
+		  	//_map.addControl(_sidebar);	
 		  	}		
 		};
 

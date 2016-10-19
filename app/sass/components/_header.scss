@@ -26,7 +26,10 @@
 
 .m-logo__logo {
 	width: initial;
-	height: 56px;
+	height: 46px;
+	@include respond-to('medium'){
+		height: 56px;
+	}
 }
 
 .m-menu {
@@ -42,26 +45,31 @@
 }
 
 .m-menu__social{
-	display: inline-block;
+	display: none;
 	margin: 0;
 	padding: 0;
 	line-height: 56px;
+	@include respond-to('medium'){
+		display:inline-block;
+	}
 }
 
-.m-menu__social li > img {
-	display: inline-block;
-	height: 50px;
-	vertical-align: middle;
-	width: auto;
+.m-menu__social li > a{
+	text-decoration:none;
+	img {
+		display: inline-block;
+		height: 20px;
+		vertical-align: middle;
+		width: auto;
+		@include respond-to('medium'){
+			height: 40px;
+		}
+	}
 }
 
-.m-menu__social li:nth-child(1) > img {
-	height: 55px;
-}
-
-.m-menu__social li:nth-child(2) > img {
-	height: 40px;
-}
+// .m-menu__social li:nth-child(2) > img {
+// 	height: 40px;
+// }
 
 .m-menu__social li {
 	-moz-transition: border-color linear 0.25s;
@@ -88,8 +96,11 @@
 .m-menu__menu {
 	cursor: pointer;
 	display: inline-block;
-	padding: 15px;
+	padding: 10px;
 	float: right;
+	@include respond-to('medium'){
+		padding: 15px;
+	}
 }
 
 .m-menu__menu span i.ipm-menu:before{

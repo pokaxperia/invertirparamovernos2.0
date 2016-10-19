@@ -29,7 +29,8 @@
 					_zm_chart = new Highcharts.Chart({
 						chart: {
 							type: 'bar',
-							renderTo: element[0]
+							renderTo: element[0],
+							height: 550
 						},
 						title: {
 								text: 'Inversión por Año'

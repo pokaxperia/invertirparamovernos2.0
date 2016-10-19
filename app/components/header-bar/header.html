@@ -1,21 +1,27 @@
 <div class="m-logo">
-	<img alt="" id="logo_ipm" class="m-logo__logo">
+	<a href="/">
+		<img alt="" id="logo_ipm" class="m-logo__logo">
+	</a>
 </div>
 
 <div class="m-menu">
 	<ul class="m-menu__social" id="social">
-		<li><img src="./images/logo_embajada_britanica.png" alt="Logo Embajada Británica"></li>
-		<li><img src="./images/logo_itdp_mexico.png" alt="Logo ITDP México"></li>
-		<li id="twitteIcon"><i class="ipm-twitter-logo"></i></li>
-		<li id="facebookIcon"><i class="ipm-facebook-logo"></i></li>
+		<li>
+			<a href="https://www.gov.uk/government/world/organisations/british-embassy-mexico-city.es-419" target="_blank">
+				<img src="./images/logo_embajada_britanica.png" alt="Logo Embajada Británica">
+			</a>
+		</li>
+		<li>
+			<a href="http://mexico.itdp.org/" target="_blank">
+				<img src="./images/logo_itdp_mexico.png" alt="Logo ITDP México">
+			</a>
+		</li>
+		<li id="twitteIcon"><a href="https://twitter.com/ITDPmx" target="_blank"><i class="ipm-twitter-logo"></i></a></li>
+		<li id="facebookIcon"><a href="https://www.facebook.com/itdpmx/" target="_blank"><i class="ipm-facebook-logo"></i></a></li>
 	</ul>
 	<div class="m-menu__menu" id="menuButton" ng-click="$ctrl.openMenu()">
 		<span><i class="ipm-menu"></i></span>
 	</div>
-
-<!-- 	<div class="m-menu__line">
-		<span class="m-menu__line-current"></span>
-	</div> -->
 </div>
 
 <div class="overlay overlay-door" ng-class="{'open': $ctrl.isMenuOpen}">
