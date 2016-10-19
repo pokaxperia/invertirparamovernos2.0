@@ -322,9 +322,13 @@
 			 series: [{
 					 name: 'Viajes al trabajo',
 					 data: [45, 24, 31]
-			 }, {
+			 },
+			 {
+ 					 name: 'Viajes a la escuela',
+ 					 data: [32, 43, 13]
+ 			 },{
 					 name: 'Inversión',
-					 data: [0, 14, 85]
+					 data: [0, 13, 87]
 			 }]
 		});
 

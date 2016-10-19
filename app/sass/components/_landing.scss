@@ -255,6 +255,7 @@
 
 .cc-logo {
 	margin: 0 auto;
+	display:inline-block;
 	@include respond-to('medium') {
 		margin: initial;
 	}
@@ -302,4 +303,8 @@
 	-webkit-transition-delay: 0.65s;
 	-o-transition-delay: 0.65s;
 	-ms-transition-delay: 0.65s;
+}
+
+.creative-commons {
+	line-height: 33px;
 }
