@@ -30,7 +30,7 @@
 						chart: {
 							type: 'bar',
 							renderTo: element[0],
-							height: 550
+							height: 500
 						},
 						title: {
 								text: 'Inversión por Año'

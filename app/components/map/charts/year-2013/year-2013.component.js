@@ -31,7 +31,7 @@
 						chart: {
 							type: 'column',
 							renderTo: element[0],
-							height: 550
+							height: 500
 						},
 						title: {
 								text: 'Viajes a la escuela'

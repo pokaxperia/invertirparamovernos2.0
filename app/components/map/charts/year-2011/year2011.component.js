@@ -23,7 +23,7 @@
 					var _zm_chart = Highcharts.chart(element[0], {
 						chart: {
 							type: 'bar',
-							height: 550
+							height: 500
 						},
 						title: {
 								text: 'Inversión por Infraestructura'
