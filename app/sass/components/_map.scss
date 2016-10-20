@@ -1,16 +1,14 @@
 #map{ 
-	// height: 100%;
-	// width: calc(100% - 700px);
 	position: absolute;
 	right: 0;
 	top: 0;
 	bottom: 0;
 	left: 100%;
 	@include respond-to('medium') {
-		left: 600px;
+		left: 650px;
 	}
 	@include respond-to('large') {
-		left: 900px;
+		left: 750px;
 	}
 
 }
@@ -28,10 +26,10 @@
 	z-index:10;
 	background:white;
 	@include respond-to('medium') {
-		width: 600px;
+		width: 650px;
 	}
 	@include respond-to('large') {
-		width: 900px;
+		width: 750px;
 	}
 }
 .m-sidebar.leaflet-control {

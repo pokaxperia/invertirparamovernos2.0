@@ -36,7 +36,7 @@
 								text: 'Inversión por Año'
 						},
 						xAxis: {
-								categories: ['']
+								categories: [],
 						},
 						yAxis: {
 								min: 0,
@@ -52,6 +52,7 @@
 		                }
 								}
 						},
+						colors: ["#6F8FC9","#71ACD0","#71B7BF","#71D0C0","#6FC0AE"],
 						series: [{
 	  		        data: [[data.Total2011]],
 		            name: '2011'

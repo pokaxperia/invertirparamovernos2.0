@@ -15,7 +15,7 @@
 	// var _sidebar = null;
 	// var slider = null;
 
-	function MapCtrl($window, $timeout, $rootScope){
+	function MapCtrl(_, $window, $timeout, $rootScope){
 		return {
 			restrict: 'E',
 			replace:true,
@@ -23,6 +23,7 @@
 			templateUrl: './components/map/map.html', 
 			link: function(scope, element, attr, ctrl){
 				scope.zmTitle = null;
+				scope.zms = [];
 
 		  	var _map = L.map('map').setView([24.325523, -102.162815],6);
 		  	L.tileLayer('https://{s}.tiles.mapbox.com/v3/itdpmexico.ig2j36lg/{z}/{x}/{y}.png', {
@@ -34,17 +35,26 @@
 				//     closeButton: true
 				// });
 
+				// _.each(zmData.features, function(e){
+				// 	scope.zms.push(
+				// 		{
+				// 			name: e.zm,
+				// 			lat:e.properties.informacion.lat,
+				// 			lng: e.properties.informacion.Long_X
+				// 		}
+				// 	);
+				// });
+
 		  	var _zmGeoJson = L.geoJson(zmData, {
 		  		style: styleZM,
 		  		onEachFeature: onEachFeatureZm
 		  	}).addTo(_map);
-
 		  	function styleZM() {
 		  		return {
 		  			color:'#000',
 		  			dashArray: 1,
-		  			fillColor: '#19BC9C',
-		  			fillOpacity: 0.5,
+		  			fillColor: '#71B7BF',
+		  			fillOpacity: 0.75,
 		  			opacity: 0,
 		  			weight: 2
 		  		};
@@ -103,7 +113,7 @@
 			  	dots: true,
 			  	arrows:false,
 			  	customPaging : function(slider, i) {
-			  		var years = ["Infraestructura", "Año", "Viajes a la escuela"];
+			  		var years = ["Inversión por <br>Infraestructura", "Inversión<br>por Año", "Viajes a<br>la escuela", "Viajes<br>al trabajo"];
 			  		return '<a>'+years[i]+'</a>';
 			  	},
 			  	dotsClass: 'slick-dots map-dots',
@@ -120,7 +130,7 @@
 		};
 
 	}
-	MapCtrl.$inject = ["$window", "$timeout", "$rootScope"];
+	MapCtrl.$inject = ["_", "$window", "$timeout", "$rootScope"];
 	angular
 	.module('ipm')
 	.directive('map', MapCtrl);

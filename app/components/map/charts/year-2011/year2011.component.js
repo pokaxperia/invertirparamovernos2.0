@@ -61,6 +61,7 @@
 		                }
 								}
 						},
+						colors: ["#6F8FC9","#71ACD0","#71B7BF","#71D0C0","#6FC0AE"],
 						series: [
 							{
 								name: '2011',

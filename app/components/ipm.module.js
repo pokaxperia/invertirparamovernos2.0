@@ -4,7 +4,9 @@
 
 	angular.module('ipm',[
 			'routes',
-			'slickCarousel'
+			'slickCarousel',
+			'ui.select',
+			'ngSanitize'
 		]
 	)
 	.constant('_', window._)
@@ -13,6 +15,9 @@
 		$rootScope.$stateParams = $stateParams;
 
 		return $rootScope;
+	}])
+	.config(['uiSelectConfig',function(uiSelectConfig) {
+		uiSelectConfig.theme = 'select2';
 	}]);
 
 })();

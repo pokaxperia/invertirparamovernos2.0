@@ -15,7 +15,6 @@
 			].join(''),
 			link: function(scope, element, attr, ctrl){
 				$rootScope.$on('dataMap', function(e, data){
-					console.log(data)
 					inversionZmChart(data);
 					e.stopPropagation();
 				});
@@ -36,17 +35,16 @@
 						title: {
 								text: 'Viajes a la escuela'
 						},
-						// tooltip: {
-						// 		pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.percentage:.0f}%</b><br/>',
-						// },
+						tooltip: {
+							pointFormat: '<span style="color:{point.color}"></span> {series.name}: <b>{point.y}</b><br/>.'
+						},
 						xAxis: {
 								categories: ['']
 						},
 						yAxis: {
 								min: 0,
 								title: {
-										text: '(millones de pesos)',
-										align: 'high'
+										text: 'Número de viajes',
 								}
 						},
 						plotOptions: {
@@ -56,27 +54,31 @@
 		                }
 								}
 						},
+						legend: {
+							layout: 'vertical'
+						},
+						colors: ["#1f6cb2","#4a7ab2","#6f8fc9","#71acd0","#71b7bf", "#71d0c0", "#6fc0ae"],
 						series: [{
 	  		        data: [[data.ea]],
-		            name: '1'
+		            name: 'Camión, taxi, combi o colectivo',
 			        },{
 		            data: [[data.eb]],
-		            name: '2'
+		            name: 'Metro, metrobús o tren ligero',
 			        },{
 		            data: [[data.ec]],
-		            name: '3'
+		            name: 'Vehículo particular (automóvil, camioneta o motocicleta)	',
 			        },{
 		            data: [[data.ed]],
-		            name: '4'
+		            name: 'Transporte laboral',
 			        },{
 		            data: [[data.ee]],
-		            name: '5'
+		            name: 'Bicicleta',
     	        },{
                 data: [[data.ef]],
-                name: '6'
+                name: 'Caminando',
     	        },{
                 data: [[data.eg]],
-                name: '6'
+                name: 'Otro'
     	        }]
 					});
 
