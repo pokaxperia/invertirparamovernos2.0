@@ -73,7 +73,7 @@
 					}
 			},
 			tooltip: {
-					pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.percentage:.0f}%</b><br/>',
+					pointFormat: '<span style="color:{series.color};font-weight:bold;">{series.name}</span>: <b>{point.percentage:.0f}%</b><br/>',
 					shared: true
 			},
 			plotOptions: {
@@ -81,6 +81,7 @@
 							stacking: 'percent'
 					}
 			},
+			colors: ["#6F8FC9","#71B7BF"],
 			series: [{
 					name: 'Otros',
 					data: [65,	54,	63,	54,	68]
@@ -113,14 +114,16 @@
 					}
 			},
 			tooltip: {
-					pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.percentage:.0f}%</b><br/>',
+					pointFormat: '<span style="color:#545454">{series.name}</span>: <b>{point.percentage:.0f}%</b><br/>',
 					shared: true
 			},
 			plotOptions: {
 					column: {
-							stacking: 'percent'
+							stacking: 'percent',
 					}
 			},
+			colors: ["#6F8FC9","#71ACD0","#71B7BF","#71D0C0","#6FC0AE", "#69A6A5"],
+			//colors: ["#3965B5","#3C8DBF","#3D9CA8","#3CBFA9","#39B57D", "#00D876"],
 			series: [
 
 				{
@@ -200,6 +203,7 @@
 								format: '{point.y:.1f}%'
 						}
 				},
+				colors: ["#6F8FC9","#71B7BF"],
 				series: [{
 						name: 'Otros',
 						data: [69838.03, 53704.75, 43501.24, 35978.96, 36845.53]
@@ -259,6 +263,7 @@
 								format: '{point.y:.1f}%'
 						}
 				},
+				colors: ["#6F8FC9","#71ACD0","#71B7BF","#71D0C0","#6FC0AE"],
 				series: [
 					{
 						name: 'Infraestructura Peatonal',
@@ -318,7 +323,7 @@
 			 tooltip: {
 					 shared: true
 			 },
-
+			 colors: ["#6F8FC9","#71ACD0","#71B7BF"],
 			 series: [{
 					 name: 'Viajes al trabajo',
 					 data: [45, 24, 31]
@@ -347,7 +352,7 @@
 						text: '2011'
 				},
 				tooltip: {
-						pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.percentage:.0f}%</b><br/>',
+						pointFormat: '<span style="color:{series.color};font-weight:bold;">{series.name}</span>: <b>{point.percentage:.0f}%</b><br/>',
 						shared: true
 				},
 				xAxis: {
@@ -428,6 +433,7 @@
 								stacking: 'normal'
 						}
 				},
+				colors: ["#004FAF","#008FB7"],
 				series: [
 					{
 						name: 'Otros',
@@ -454,7 +460,7 @@
 						text: '2012'
 				},
 				tooltip: {
-						pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.percentage:.0f}%</b><br/>',
+						pointFormat: '<span style="color:{series.color};font-weight:bold;">{series.name}</span>: <b>{point.percentage:.0f}%</b><br/>',
 						shared: true
 				},
 				xAxis: {
@@ -535,6 +541,7 @@
 								stacking: 'normal'
 						}
 				},
+				colors: ["#004FAF","#008FB7"],
 				series: [
 					{
 						name: 'Otros',
@@ -561,7 +568,7 @@
 					text: '2013'
 			},
 			tooltip: {
-					pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.percentage:.0f}%</b><br/>',
+					pointFormat: '<span style="color:{series.color};font-weight:bold;">{series.name}</span>: <b>{point.percentage:.0f}%</b><br/>',
 					shared: true
 			},
 			xAxis: {
@@ -642,6 +649,7 @@
 							stacking: 'normal'
 					}
 			},
+			colors: ["#004FAF","#008FB7"],
 			series: [
 				{
 					name: 'Otros',
@@ -668,7 +676,7 @@
 					text: '2014'
 			},
 			tooltip: {
-					pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.percentage:.0f}%</b><br/>',
+					pointFormat: '<span style="color:{series.color};font-weight:bold;">{series.name}</span>: <b>{point.percentage:.0f}%</b><br/>',
 					shared: true
 			},
 			xAxis: {
@@ -749,6 +757,7 @@
 							stacking: 'normal'
 					}
 			},
+			colors: ["#004FAF","#008FB7"],
 			series: [
 				{
 					name: 'Otros',
@@ -775,7 +784,7 @@
 					text: '2015'
 			},
 			tooltip: {
-					pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.percentage:.0f}%</b><br/>',
+					pointFormat: '<span style="color:{series.color};font-weight:bold;">{series.name}</span>: <b>{point.percentage:.0f}%</b><br/>',
 					shared: true
 			},
 			xAxis: {
@@ -856,6 +865,7 @@
 							stacking: 'normal'
 					}
 			},
+			colors: ["#004FAF","#008FB7"],
 			series: [
 				{
 					name: 'Otros',
@@ -883,7 +893,7 @@
 						text: '2015'
 				},
 				tooltip: {
-						pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.percentage:.0f}%</b><br/>',
+						pointFormat: '<span style="color:{series.color};font-weight:bold;">{series.name}</span>: <b>{point.percentage:.0f}%</b><br/>',
 						shared: true
 				},
 				xAxis: {
@@ -964,6 +974,7 @@
 								stacking: 'normal'
 						}
 				},
+				colors: ["#004FAF","#008FB7"],
 				series: [
 					{
 						name: 'Auto',
@@ -990,7 +1001,7 @@
 						text: '2012'
 				},
 				tooltip: {
-						pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.percentage:.0f}%</b><br/>',
+						pointFormat: '<span style="color:{series.color};font-weight:bold;">{series.name}</span>: <b>{point.percentage:.0f}%</b><br/>',
 						shared: true
 				},
 				xAxis: {
@@ -1071,6 +1082,7 @@
 								stacking: 'normal'
 						}
 				},
+				colors: ["#004FAF","#008FB7"],
 				series: [
 					{
 						name: 'Auto',
@@ -1097,7 +1109,7 @@
 					text: '2013'
 			},
 			tooltip: {
-					pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.percentage:.0f}%</b><br/>',
+					pointFormat: '<span style="color:{series.color};font-weight:bold;">{series.name}</span>: <b>{point.percentage:.0f}%</b><br/>',
 					shared: true
 			},
 			xAxis: {
@@ -1178,6 +1190,7 @@
 							stacking: 'normal'
 					}
 			},
+			colors: ["#004FAF","#008FB7"],
 			series: [
 				{
 					name: 'Auto',
@@ -1204,7 +1217,7 @@
 					text: '2014'
 			},
 			tooltip: {
-					pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.percentage:.0f}%</b><br/>',
+					pointFormat: '<span style="color:{series.color};font-weight:bold;">{series.name}</span>: <b>{point.percentage:.0f}%</b><br/>',
 					shared: true
 			},
 			xAxis: {
@@ -1285,6 +1298,7 @@
 							stacking: 'normal'
 					}
 			},
+			colors: ["#004FAF","#008FB7"],
 			series: [
 				{
 					name: 'Auto',
@@ -1311,7 +1325,7 @@
 					text: '2015'
 			},
 			tooltip: {
-					pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.percentage:.0f}%</b><br/>',
+					pointFormat: '<span style="color:{series.color};font-weight:bold;">{series.name}</span>: <b>{point.percentage:.0f}%</b><br/>',
 					shared: true
 			},
 			xAxis: {
@@ -1392,6 +1406,7 @@
 							stacking: 'normal'
 					}
 			},
+			colors: ["#004FAF","#008FB7"],
 			series: [
 				{
 					name: 'Auto',

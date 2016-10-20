@@ -66,7 +66,7 @@
 		}
 
 		head.openMenu = function() {
-			head.isMenuOpen !== true ? [head.isMenuOpen = true, logoIpm[0].setAttribute('src', './images/logo_ipm_white.png')]: [head.isMenuOpen = false,logoIpm[0].setAttribute('src', './images/logo_ipm_gray.png')];
+			head.isMenuOpen !== true ? [head.isMenuOpen = true, head._changeColor()]: [head.isMenuOpen = false,head._changeColor()];
 		};
 
 	}
