@@ -52,7 +52,7 @@
 		                }
 								}
 						},
-						colors: ["#6F8FC9","#71ACD0","#71B7BF","#71D0C0","#6FC0AE"],
+						colors: ["#41AD49","#70A4D8","#E96021","#F9A01B","#71acd0"],
 						series: [{
 	  		        data: [[data.Total2011]],
 		            name: '2011'

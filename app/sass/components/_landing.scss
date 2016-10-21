@@ -36,6 +36,17 @@
 	}
 }
 
+.m-landing__downloads {
+	background: url('../images/landing_downloads.jpg') no-repeat;
+	background-position: center center;
+	background-size: cover;
+	width: 100%;
+	z-index:4;
+	@include respond-to('medium') {
+		background-attachment: fixed;
+	}
+}
+
 .m-landing__interactive,
 .m-landing__downloads {
 	z-index:4;

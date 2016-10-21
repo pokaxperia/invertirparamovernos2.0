@@ -28,7 +28,7 @@
 
 					_zm_chart = new Highcharts.Chart({
 						chart: {
-							type: 'column',
+							type: 'bar',
 							renderTo: element[0],
 							height: 500
 						},
@@ -57,7 +57,7 @@
 						legend: {
 							layout: 'vertical'
 						},
-						colors: ["#1f6cb2","#4a7ab2","#6f8fc9","#71acd0","#71b7bf", "#71d0c0", "#6fc0ae"],
+						colors: ["#71acd0","#41AD49","#71d0c0","#70A4D8","#1f6cb2", "#E96021", "#F9A01B"],
 						series: [{
 	  		        data: [[data.ta]],
 		            name: 'Camión, taxi, combi o colectivo',
