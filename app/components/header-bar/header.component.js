@@ -39,27 +39,31 @@
 			});
 
 			menuButton[0].style.backgroundColor = 'rgba(57,57,58,1)';
-			overlayMenu.style.background = 'url("../images/background_menu.jpg") no-repeat';
-			//overlayMenu.style.backgroundColor = 'rgba(57,57,58,1)';
+			overlayMenu.style.background = 'url("./images/background_menu.jpg") no-repeat center center';
+			overlayMenu.style.backgroundSize = 'cover';
 		};
 
 		head._changeColor = function() {
 
 			if ($location.path() === "/") {
-				twitterIcon[0].children[0].children[0].style.color = '#ffffff';
-				twitterIcon[0].children[2].children[0].style.color = '#ffffff';
-				twitterIcon[0].children[3].children[0].style.color = '#ffffff';
-				logoIpm[0].setAttribute('src', './images/logo_ipm_white.png');
-				logoItdp[0].setAttribute('src', './images/logo_itdp_mexico_white.png');
-				logoEmbajada[0].setAttribute('src', './images/logo_embajada_britanica_white.png');
+				$timeout(function() {
+					twitterIcon[0].children[0].children[0].style.color = '#ffffff';
+					twitterIcon[0].children[2].children[0].style.color = '#ffffff';
+					twitterIcon[0].children[3].children[0].style.color = '#ffffff';	
+					logoIpm[0].setAttribute('src', './images/logo_ipm_white.png');
+					logoItdp[0].setAttribute('src', './images/logo_itdp_mexico_white.png');
+					logoEmbajada[0].setAttribute('src', './images/logo_embajada_britanica_white.png');
+				}, 0);
 			}
-			if ($location.path() === "/resultados" || $location.path() === "/descargas" || $location.path() === "/mapa") {
-				twitterIcon[0].children[0].children[0].style.color = '#545454';
-				twitterIcon[0].children[2].children[0].style.color = '#545454';
-				twitterIcon[0].children[3].children[0].style.color = '#545454';
-				logoIpm[0].setAttribute('src', './images/logo_ipm_gray.png');
-				logoItdp[0].setAttribute('src', './images/logo_itdp_mexico_black.png');
-				logoEmbajada[0].setAttribute('src', './images/logo_embajada_britanica_black.png');
+			else {
+				$timeout(function() {
+					twitterIcon[0].children[0].children[0].style.color = '#545454';
+					twitterIcon[0].children[2].children[0].style.color = '#545454';
+					twitterIcon[0].children[3].children[0].style.color = '#545454';
+					logoIpm[0].setAttribute('src', './images/logo_ipm_gray.png');
+					logoItdp[0].setAttribute('src', './images/logo_itdp_mexico_black.png');
+					logoEmbajada[0].setAttribute('src', './images/logo_embajada_britanica_black.png');
+				},0);
 			}
 		};
 

@@ -5,10 +5,10 @@
 	bottom: 0;
 	left: 100%;
 	@include respond-to('medium') {
-		left: 650px;
+		left: calc(100% - 340px);
 	}
 	@include respond-to('large') {
-		left: 750px;
+		left: calc(100% - 500px)
 	}
 
 }
@@ -26,11 +26,23 @@
 	z-index:8;
 	background:white;
 	@include respond-to('medium') {
-		width: 650px;
+		width: calc(100% - 340px)
 	}
 	@include respond-to('large') {
-		width: 750px;
+		width: calc(100% - 500px)
 	}
+	.m-sidebar__zm {
+		padding-top: 53px;
+		@include respond-to('large') {
+			padding-top: initial;
+		}
+	}
+}
+
+.m-sidebar__infra {
+	display:none;
+	height: calc(100% - 124px);
+	overflow-y: auto;
 }
 .m-sidebar.leaflet-control {
 	padding: 0;
@@ -90,11 +102,29 @@
 	li {
 		width: initial;
 		text-transform: uppercase;
+		a{
+			font-size: 14px !important;
+			font-weight: 500;
+		}
 	}
 }
 
-// @include respond-to('large') {
-// 	.leaflet-sidebar {
-// 		width: 860px;
-// 	}
-// }
+.selectize-input {
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.ui-select-choices-row:hover {
+	background-color: $gray-light !important;
+	color: $gray-dark;
+	font-weight: 500;
+}
+
+.selectize-dropdown{
+	font-size: 16px;
+	.active {
+		background: $gray-light;
+		color: $gray-dark;
+		font-weight: 500;
+	}
+}

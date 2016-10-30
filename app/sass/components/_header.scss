@@ -49,7 +49,7 @@
 	margin: 0;
 	padding: 0;
 	line-height: 56px;
-	@include respond-to('medium'){
+	@include respond-to('large'){
 		display:inline-block;
 	}
 }
@@ -161,15 +161,19 @@
 	border: none;
 	color: transparent;
 	cursor: pointer;
-	height: 80px;
+	height: 40px;
 	outline: none;
 	overflow: hidden;
 	position: absolute;
 	right: 20px;
 	text-indent: 200%;
 	top: 20px;
-	width: 80px;
+	width: 40px;
 	z-index: 100;
+	@include respond-to('medium') {
+		width: 80px;
+		height: 80px;
+	}
 }
 
 /* Menu style */
@@ -194,7 +198,7 @@
 .overlay ul li {
 	display: block;
 	height: 20%;
-	height: calc(100% / 5);
+	height: calc(100% / 4);
 	min-height: 54px;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
