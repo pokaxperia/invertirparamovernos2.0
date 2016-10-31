@@ -57,13 +57,14 @@
 						legend: {
 							layout: 'vertical'
 						},
+						tooltip: {
+							  enabled: true,
+							  headerformat: ''
+						},
 						colors: ["#71acd0","#41AD49","#71d0c0","#70A4D8","#1f6cb2", "#E96021", "#F9A01B"],
 						series: [{
 	  		        data: [[data.ea]],
-		            name: 'Camión, taxi, combi o colectivo',
-			        },{
-		            data: [[data.eb]],
-		            name: 'Metro, metrobús o tren ligero',
+		            name: 'Transporte Público',
 			        },{
 		            data: [[data.ec]],
 		            name: 'Vehículo particular (automóvil, camioneta o motocicleta)	',

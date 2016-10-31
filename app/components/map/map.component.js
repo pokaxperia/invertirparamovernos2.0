@@ -92,17 +92,35 @@
 			  	draggable: false,
 			  	dots: true,
 			  	arrows:false,
-			  	customPaging : function(slider, i) {
-			  		var years = ["Inversión por <br>Infraestructura", "Inversión<br>por Año", "Viajes a<br>la escuela", "Viajes<br>al trabajo"];
-			  		return '<a>'+years[i]+'</a>';
-			  	},
+			  	slidesToShow: 2,
+			  	slidesToScroll: 2,
 			  	dotsClass: 'slick-dots map-dots',
 			  	method: {},
 			  	event: {
 			  		init: function(){
 			  			
 			  		}
-			  	}
+			  	},
+			  	customPaging : function(slider, i) {
+			  		console.log($window)
+			  		if ($window.innerWidth >= 992) {
+			  			var years = ["Presupuesto", "Distribución Modal"];	
+			  		}
+			  		else {
+			  			var years = ["Inversión por Infraestructura", "Inversión por Año", "Viajes a la escuela", "Viajes al trabajo"];
+			  		}
+			  		
+			  		return '<a>'+years[i]+'</a>';
+			  	},
+			  	responsive: [
+				  	{
+				  		breakpoint: 992,
+				  		settings:{
+			  				slidesToShow: 1,
+			  				slidesToScroll: 1,
+			  			}
+				  	}
+			  	]
 			  };
 			  scope.itemArray = [
 				  {id:1, zm: 'Acapulco',lat:16.97932681281335, lon:-99.89283719518407, zoom: 10},

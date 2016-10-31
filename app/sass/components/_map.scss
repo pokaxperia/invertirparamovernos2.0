@@ -43,6 +43,9 @@
 	display:none;
 	height: calc(100% - 124px);
 	overflow-y: auto;
+	@include respond-to('large') {
+		height: calc(100% - 24px);
+	}
 }
 .m-sidebar.leaflet-control {
 	padding: 0;

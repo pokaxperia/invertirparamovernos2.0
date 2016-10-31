@@ -36,7 +36,7 @@
 								text: 'Inversión por Año'
 						},
 						xAxis: {
-								categories: [],
+								type: 'category'
 						},
 						yAxis: {
 								min: 0,
@@ -46,29 +46,40 @@
 								}
 						},
 						plotOptions: {
-								bar: {
-										dataLabels: {
-	                    enabled: true
-		                }
-								}
-						},
+		            series: {
+  									dataLabels: {
+                      enabled: true,
+  	                }
+		            }
+		        },
+		        legend: {
+		            enabled: false
+		        },
+		        tooltip: {
+		        	  enabled: false
+		        },
 						colors: ["#41AD49","#70A4D8","#E96021","#F9A01B","#71acd0"],
 						series: [{
-	  		        data: [[data.Total2011]],
-		            name: '2011'
-			        },{
-		            data: [[data.Total2012]],
-		            name: '2012'
-			        },{
-		            data: [[data.Total2013]],
-		            name: '2013'
-			        },{
-		            data: [[data.Total2014]],
-		            name: '2014'
-			        },{
-		            data: [[data.Total2015]],
-		            name: '2015'
-			        }]
+							nam2: "Inversión",
+							colorByPoint: true,
+							data:[
+								{
+		  		        y: parseInt(data.Total2011),
+			            name: '2011'
+				        },{
+			            y: parseInt(data.Total2012),
+			            name: '2012'
+				        },{
+			            y: parseInt(data.Total2013),
+			            name: '2013'
+				        },{
+			            y: parseInt(data.Total2014),
+			            name: '2014'
+				        },{
+			            y: parseInt(data.Total2015),
+			            name: '2015'
+							}]
+							}]
 					});
 
 					$timeout(function() {
