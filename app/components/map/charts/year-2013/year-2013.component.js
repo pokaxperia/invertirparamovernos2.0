@@ -66,6 +66,9 @@
 	  		        data: [[data.ea]],
 		            name: 'Transporte Público',
 			        },{
+			        	data: [[data.eb]],
+		            name: 'Metro, metrobús o tren ligero',
+		          },{
 		            data: [[data.ec]],
 		            name: 'Vehículo particular (automóvil, camioneta o motocicleta)	',
 			        },{
