@@ -33,13 +33,13 @@
 							height: 500
 						},
 						title: {
-								text: 'Viajes a la escuela'
+								text: 'Distribución Modal'
 						},
 						tooltip: {
 							pointFormat: '<span style="color:{point.color}"></span> {series.name}: <b>{point.y}</b><br/>.'
 						},
 						xAxis: {
-								categories: ['']
+								categories: ['Caminando', 'Bicicleta', 'Transporte público', 'Transporte Laboral', 'Vehìculo', 'Otro']
 						},
 						yAxis: {
 								min: 0,
@@ -61,29 +61,17 @@
 							  enabled: true,
 							  headerformat: ''
 						},
-						colors: ["#71acd0","#41AD49","#71d0c0","#70A4D8","#1f6cb2", "#E96021", "#F9A01B"],
-						series: [{
-	  		        data: [[data.ea]],
-		            name: 'Transporte Público',
-			        },{
-			        	data: [[data.eb]],
-		            name: 'Metro, metrobús o tren ligero',
-		          },{
-		            data: [[data.ec]],
-		            name: 'Vehículo particular (automóvil, camioneta o motocicleta)	',
-			        },{
-		            data: [[data.ed]],
-		            name: 'Transporte laboral',
-			        },{
-		            data: [[data.ee]],
-		            name: 'Bicicleta',
-    	        },{
-                data: [[data.ef]],
-                name: 'Caminando',
-    	        },{
-                data: [[data.eg]],
-                name: 'Otro'
-    	        }]
+						colors: ["#71acd0","#41AD49","#71d0c0","#1f6cb2", "#E96021", "#F9A01B"],
+						series: [
+							{
+                data: [data.ef, data.ee, data.ea, data.ed, data.ec, data.eg],
+                name: 'Viajes a la escuela',
+    	        },
+							{
+                data: [data.tf, data.te, data.ta, data.td, data.tc, data.tg],
+                name: 'Viajes al trabajo',
+    	        }
+    	       ]
 					});
 
 					$timeout(function() {

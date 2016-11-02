@@ -107,7 +107,7 @@
 			  			var years = ["Presupuesto", "Distribución Modal"];	
 			  		}
 			  		else {
-			  			var years = ["Inversión por Infraestructura", "Inversión por Año", "Viajes a la escuela", "Viajes al trabajo"];
+			  			var years = ["Inversión por Infraestructura", "Inversión por Año", "Distribución Modal"];
 			  		}
 			  		
 			  		return '<a>'+years[i]+'</a>';

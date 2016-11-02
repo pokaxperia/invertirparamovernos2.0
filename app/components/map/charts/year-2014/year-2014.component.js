@@ -57,29 +57,30 @@
 						legend: {
 							layout: 'vertical'
 						},
-						colors: ["#71acd0","#41AD49","#71d0c0","#70A4D8","#1f6cb2", "#E96021", "#F9A01B"],
-						series: [{
-	  		        data: [[data.ta]],
-		            name: 'Camión, taxi, combi o colectivo',
-			        },{
-		            data: [[data.tb]],
-		            name: 'Metro, metrobús o tren ligero',
-			        },{
-		            data: [[data.tc]],
-		            name: 'Vehículo particular (automóvil, camioneta o motocicleta)	',
-			        },{
-		            data: [[data.td]],
-		            name: 'Transporte laboral',
-			        },{
-		            data: [[data.te]],
-		            name: 'Bicicleta',
-    	        },{
+						colors: ["#71acd0","#41AD49","#71d0c0","#1f6cb2", "#E96021", "#F9A01B"],
+						series: [
+							{
                 data: [[data.tf]],
                 name: 'Caminando',
     	        },{
+		            data: [[data.te]],
+		            name: 'Bicicleta',
+    	        },
+    					{
+    		        data: [[data.ta]],
+  	            name: 'Transporte público',
+  		        },{
+		            data: [[data.td]],
+		            name: 'Transporte laboral',
+			        },
+							{
+		            data: [[data.tc]],
+		            name: 'Vehículo',
+			        },{
                 data: [[data.tg]],
                 name: 'Otro'
-    	        }]
+    	        }
+    	       ]
 					});
 
 					$timeout(function() {
