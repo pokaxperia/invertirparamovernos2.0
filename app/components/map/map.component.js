@@ -92,8 +92,8 @@
 			  	draggable: false,
 			  	dots: true,
 			  	arrows:false,
-			  	slidesToShow: 2,
-			  	slidesToScroll: 2,
+			  	slidesToShow: 1,
+			  	slidesToScroll: 1,
 			  	dotsClass: 'slick-dots map-dots',
 			  	method: {},
 			  	event: {
@@ -102,14 +102,7 @@
 			  		}
 			  	},
 			  	customPaging : function(slider, i) {
-			  		console.log($window)
-			  		if ($window.innerWidth >= 992) {
-			  			var years = ["Presupuesto", "Distribución Modal"];	
-			  		}
-			  		else {
-			  			var years = ["Inversión por Infraestructura", "Inversión por Año", "Distribución Modal"];
-			  		}
-			  		
+			  		var years = ["Inversión por Infraestructura", "Inversión por Año", "Distribución Modal"];
 			  		return '<a>'+years[i]+'</a>';
 			  	},
 			  	responsive: [
