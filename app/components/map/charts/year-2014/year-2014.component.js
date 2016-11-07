@@ -11,7 +11,7 @@
 			replace:true,
 			scope: '=',
 			template: [
-				'<div id="year-2014" ></div>'
+				'<div id="year-2014"></div>'
 			].join(''),
 			link: function(scope, element, attr, ctrl){
 				$rootScope.$on('dataMap', function(e, data){
@@ -33,54 +33,50 @@
 							height: 500
 						},
 						title: {
-								text: 'Viajes al trabajo'
-						},
-						tooltip: {
-								pointFormat: '<span style="color:{point.color}"></span> {series.name}: <b>{point.y}</b><br/>.'
+								text: 'Población'
 						},
 						xAxis: {
-								categories: ['']
+								type: 'category'
 						},
 						yAxis: {
 								min: 0,
 								title: {
-										text: 'Número de viajes',
+										text: '(millones de habitantes)',
+										align: 'high'
 								}
 						},
 						plotOptions: {
-								bar: {
-										dataLabels: {
-	                    enabled: true
-		                }
-								}
-						},
-						legend: {
-							layout: 'vertical'
-						},
-						colors: ["#71acd0","#41AD49","#71d0c0","#1f6cb2", "#E96021", "#F9A01B"],
-						series: [
-							{
-                data: [[data.tf]],
-                name: 'Caminando',
-    	        },{
-		            data: [[data.te]],
-		            name: 'Bicicleta',
-    	        },
-    					{
-    		        data: [[data.ta]],
-  	            name: 'Transporte público',
-  		        },{
-		            data: [[data.td]],
-		            name: 'Transporte laboral',
-			        },
-							{
-		            data: [[data.tc]],
-		            name: 'Vehículo',
-			        },{
-                data: [[data.tg]],
-                name: 'Otro'
-    	        }
-    	       ]
+		            series: {
+  									dataLabels: {
+                      enabled: true,
+  	                }
+		            }
+		        },
+		        legend: {
+		            enabled: false
+		        },
+		        tooltip: {
+		        	  enabled: false
+		        },
+						colors: ["#41AD49","#70A4D8","#E96021","#F9A01B"],
+						series: [{
+							nam2: "Población",
+							colorByPoint: true,
+							data:[
+								{
+		  		        y: parseInt(data.Pob90),
+			            name: 'Población año 1990'
+				        },{
+			            y: parseInt(data.Pob00),
+			            name: 'Población año 2000'
+				        },{
+			            y: parseInt(data.Pob10),
+			            name: 'Población año 2010'
+				        },{
+			            y: parseInt(data.Pob15),
+			            name: 'Población año 2015'
+				        }]
+							}]
 					});
 
 					$timeout(function() {

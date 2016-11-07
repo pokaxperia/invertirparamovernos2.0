@@ -82,6 +82,10 @@
 .m-sidebar__infra {
 	padding: 15px;
 }
+.m-sidebar__zm-select {
+	width: 100%;
+	margin: 5px auto 0px;
+}
 
 .highcharts-title {
 	color: $gray-smooth !important;
@@ -129,5 +133,10 @@
 		background: $gray-light;
 		color: $gray-dark;
 		font-weight: 500;
+	}
+}
+@media screen and (min-width:768px) {
+	.m-sidebar__zm-select {
+		width: 340px;
 	}
 }

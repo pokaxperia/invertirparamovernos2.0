@@ -119,13 +119,13 @@
 		{
 			 name: 'Viajes al trabajo',
 			 data: [45, 24, 31]
-		},
-		{
-			 name: 'Viajes a la escuela',
-			 data: [32, 43, 13]
 		},{
 			 name: 'Inversión',
 			 data: [0, 13, 87]
+		},
+		{
+			 name: 'Viajes a la escuela',
+			 data: [32, 43, 25]
 		}
 	];
 	var sixOneSeries = [
@@ -557,20 +557,14 @@
 					 }
 			 },
 			 tooltip: {
-			 		pointFormat: '<span style="color:{series.color};font-weight:bold;">{series.name}</span>: <b>{point.percentage:.0f}%</b><br/>',
+			 		pointFormat: '<span style="color:{series.color};font-weight:bold;">{series.name}</span>: <b>{point.y}</b>{point.percentage}%</b><br/>',
 			 		shared: true
 			 },
-			 plotOptions: {
-			 		column: {
-			 			stacking: 'percent',
-			 			dataLabels: {
-			 				enabled: !($(window).width() >= 768),
-			 				formatter:function() {
-			 					return this.point.y + '%';
-			 				}
-			 			}
-			 		}
-			 },
+			// plotOptions: {
+   //        column: {
+   //            stacking: 'percent'
+   //        }
+   //    },
 			 colors: ["#41AD49","#70A4D8","#E96021"],
 			 series: []
 		});
