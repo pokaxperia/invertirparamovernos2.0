@@ -33,13 +33,29 @@
 							height: 500
 						},
 						title: {
-								text: 'Distribución Modal'
+								text: 'Reparto modal'
 						},
 						tooltip: {
 							pointFormat: '<span style="color:{point.color}"></span> {series.name}: <b>{point.y}</b><br/>.'
 						},
 						xAxis: {
-								categories: ['Caminando', 'Bicicleta', 'Transporte público', 'Transporte Laboral', 'Vehìculo', 'Otro']
+							categories: ['Caminando', 'Bicicleta', 'Transporte público', 'Transporte Laboral', 'Vehículo', 'Otro'],
+							title: {
+									text: ''
+							},
+							labels: {
+								useHTML: true,
+								formatter: function () {
+										return {
+											'Caminando': '<i class="ipm-pedestrian"></i>',
+											'Bicicleta': '<i class="ipm-bicycle"></i>',
+											'Transporte público': '<i class="ipm-transport"></i>',
+											'Transporte Laboral': '<i class="ipm-transport-lab"></i>',
+											'Vehículo': '<i class="ipm-car"></i>',
+											'Otro': '<i class="ipm-other"></i>'
+									}[this.value]; 
+								}
+							}								
 						},
 						yAxis: {
 								min: 0,

@@ -33,7 +33,7 @@
 							height: 500
 						},
 						title: {
-								text: 'Inversión por Año'
+								text: 'Inversión por año'
 						},
 						xAxis: {
 								type: 'category'

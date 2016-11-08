@@ -121,7 +121,7 @@
 			 data: [45, 24, 31]
 		},{
 			 name: 'Inversión',
-			 data: [0, 13, 87]
+			 data: [0.42, 13, 87]
 		},
 		{
 			 name: 'Viajes a la escuela',

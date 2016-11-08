@@ -103,10 +103,10 @@
 			  	},
 			  	customPaging : function(slider, i) {
 			  		if ($window.innerWidth <= 768) {
-			  			var years = ["Inversión por Infraestructura", "Distribución Modal", "Inversión por Año", "Población"];	
+			  			var years = ["Inversión por tipo de infraestructura", "Distribución modal", "Inversión por año", "Crecimiento poblacional"];
 			  		}
 			  		else {
-			  			var years = ["Presupuesto", "Distribución Modal"];	
+			  			var years = ["Inversión por tipo de infraestructura<br/>/Distribución Modal", "Inversión por año <br/>Crecimiento poblacional"];
 			  			
 			  		}
 			  		

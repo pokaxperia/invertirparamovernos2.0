@@ -33,7 +33,7 @@
 							height: 500
 						},
 						title: {
-								text: 'Población'
+								text: 'Crecimiento poblacional'
 						},
 						xAxis: {
 								type: 'category'
