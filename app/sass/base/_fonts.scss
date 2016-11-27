@@ -30,31 +30,24 @@
     margin: 0px;
 }
 
-.ipm-bicycle:before { content: "\f100"; font-size: 30px;}
-.ipm-car:before {
-    content: "\f101";
-    font-size: 30px;
-    transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
-}
-.ipm-download:before { content: "\f102"; }
-.ipm-download-data:before { content: "\f103"; }
-.ipm-download-document:before { content: "\f104"; }
-.ipm-facebook-logo:before { content: "\f105"; }
-.ipm-graphics:before { content: "\f106"; }
-.ipm-interactive:before { content: "\f107"; }
-.ipm-map:before { content: "\f108"; }
-.ipm-menu:before { content: "\f109"; }
-.ipm-next:before { content: "\f10a"; }
-.ipm-other:before { content: "\f10b"; font-size: 20px;}
-.ipm-paving:before { content: "\f10c"; }
-.ipm-pedestrian:before { content: "\f10d"; font-size: 30px;}
-.ipm-previous:before { content: "\f10e"; }
-.ipm-public:before { content: "\f10f"; font-size: 30px;}
-.ipm-transport:before { content: "\f110"; font-size: 30px;}
-.ipm-transport-lab:before { content: "\f111"; font-size: 30px;;
-    -webkit-transform: rotate(180deg);}
-.ipm-twitter-logo:before { content: "\f112"; }
 
-
+.ipm-other:before { content: "\f100";  font-size: 20px;}
+.ipm-previous:before { content: "\f101"; }
+.ipm-transport:before { content: "\f102"; font-size: 30px;}
+.ipm-cloud-computing:before { content: "\f103"; }
+.ipm-pedestrian:before { content: "\f104"; font-size: 30px;}
+.ipm-download-data:before { content: "\f105"; }
+.ipm-download:before { content: "\f106"; }
+.ipm-facebook-logo:before { content: "\f107"; }
+.ipm-bicycle:before { content: "\f108"; font-size: 30px;}
+.ipm-map:before { content: "\f109"; }
+.ipm-menu:before { content: "\f10a"; }
+.ipm-interactive:before { content: "\f10b"; }
+.ipm-next:before { content: "\f10c"; }
+.ipm-public:before { content: "\f10d"; font-size: 30px;}
+.ipm-graphics:before { content: "\f10e"; }
+.ipm-paving:before { content: "\f10f"; font-size: 30px;}
+.ipm-twitter-logo:before { content: "\f110";}
+.ipm-transport-lab:before { content: "\f111"; font-size: 30px;}
+.ipm-car:before { content: "\f112"; font-size: 30px;}
 

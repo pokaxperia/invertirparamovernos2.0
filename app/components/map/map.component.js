@@ -103,11 +103,10 @@
 			  	},
 			  	customPaging : function(slider, i) {
 			  		if ($window.innerWidth <= 768) {
-			  			var years = ["Inversión por tipo de infraestructura", "Distribución modal", "Inversión por año", "Crecimiento poblacional"];
+			  			var years = ["Inversión por tipo de infraestructura", "Inversión por año","Inversión por año", "Crecimiento poblacional"];
 			  		}
 			  		else {
-			  			var years = ["Inversión por tipo de infraestructura<br/>/Distribución Modal", "Inversión por año <br/>Crecimiento poblacional"];
-			  			
+			  			var years = ["Inversión por tipo de infraestructura<br/>/Distribución Modal", "Inversión por año <br/>Crecimiento poblacional","Inversión por año", "Crecimiento poblacional"];
 			  		}
 			  		
 			  		return '<a>'+years[i]+'</a>';
@@ -159,7 +158,7 @@
 				  {id:34, zm: 'Puerto Vallarta', lat:20.69832620111513, lon:-105.1489176295303, zoom: 11},
 				  {id:35, zm: 'Querétaro', lat: 20.619737786410546, lon: -100.37221508258263, zoom: 10},
 				  {id:36, zm: 'Reynosa-Río Bravo', lat:26.03544144838559, lon:-98.17964382087804, zoom: 10},
-				  {id:37, zm: 'Rioverde-Ciudad Fernández', lat:21.930313884219455, lon:-100.00579079180935, zoom:12},
+				  {id:37, zm: 'Ríoverde-Ciudad Fernández', lat:21.930313884219455, lon:-100.00579079180935, zoom:12},
 				  {id:38, zm: 'Saltillo', lat:25.45679847418931, lon:-100.93974700604026, zoom: 11},
 				  {id:39, zm: 'San Francisco del Rincón', lat:21.02864192593463, lon:-101.85886773582703, zoom:13},
 				  {id:40, zm: 'San Luis Potosí-Soledad de Graciano Sánchez', lat:22.1255908634478, lon:-100.96914700886161, zoom: 11},

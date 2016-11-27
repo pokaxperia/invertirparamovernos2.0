@@ -20,23 +20,20 @@
 				});
 
 				function inversionZmChart(data) {
-					var _zm_chart = Highcharts.setOptions({
-						lang: {
-							thousandsSep: ','
-						}
-					});
 
-					_zm_chart = new Highcharts.Chart({
+					var _zm_chart = new Highcharts.Chart({
 						chart: {
 							type: 'bar',
 							renderTo: element[0],
-							height: 500
+							height: 520
 						},
 						title: {
 								text: 'Reparto modal'
 						},
 						tooltip: {
-							pointFormat: '<span style="color:{point.color}"></span> {series.name}: <b>{point.y}</b><br/>.'
+							formatter: function() {
+								return '<span style="font-weight: bold;">'+this.key+'<br/><b>'+ this.series.name +'</span></b>: '+this.point.y+'%';
+							}
 						},
 						xAxis: {
 							categories: ['Caminando', 'Bicicleta', 'Transporte público', 'Transporte Laboral', 'Vehículo', 'Otro'],
@@ -66,17 +63,21 @@
 						plotOptions: {
 								bar: {
 										dataLabels: {
-	                    enabled: true
+	                    enabled: true,
+	                    format: '{point.y:.0f}%'
 		                }
 								}
 						},
 						legend: {
-							layout: 'vertical'
+							layout: 'horizontal'
 						},
-						tooltip: {
-							  enabled: true,
-							  headerformat: ''
-						},
+						// tooltip: {
+						// 	  enabled: true,
+						// 	  headerformat: ''
+						// },
+						// tooltip: {
+						// 		shared: true
+						// },
 						colors: ["#71acd0","#41AD49","#71d0c0","#1f6cb2", "#E96021", "#F9A01B"],
 						series: [
 							{

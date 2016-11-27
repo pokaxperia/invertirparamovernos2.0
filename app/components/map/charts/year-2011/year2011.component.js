@@ -61,6 +61,11 @@
 		                }
 								}
 						},
+						tooltip: {
+							formatter: function() {
+								return '<span style="font-weight: bold;">'+this.key+'<br/><b>'+ this.series.name +'</span></b>: '+this.point.y+'%';
+							}
+						},
 						colors: ["#41AD49","#70A4D8","#E96021","#F9A01B","#71acd0"],
 						series: [
 							{

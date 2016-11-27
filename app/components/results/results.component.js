@@ -57,27 +57,27 @@
 	var twoSeries= [
 		{
 			name: 'Infraestructura Peatonal',
-			data: [4, 3, 4, 3, 5]
+			data: [4.0, 3.3, 4.0, 2.6, 5.2]
 		},
 		{
 			name: 'Espacio Público',
-			data: [6, 7, 11, 7, 7]
+			data: [5.7, 7.3, 11.5, 7.2, 6.8]
 		},
 		{
 			name: 'Infraestructura Ciclista',
-			data: [0, 0, 0, 0, 0]
+			data: [0.3, 0.3, 0.2, 0.5, 0.4]
 		},
 		{
 			name: 'Transporte Público',
-			data: [10, 29, 10, 7, 1]
+			data: [10.3, 29.0, 10.2, 7.2, 0.8]
 		},
 		{
 			name: 'Pavimentación',
-			data: [32, 34, 34, 27, 36]
+			data: [31.5, 34.2, 34.3, 27.0, 36.0]
 		},
 		{
 			name: 'Infraestructura Vial',
-			data: [48, 26, 40, 56, 51]
+			data: [48.2, 25.9, 39.8, 55.6, 50.7]
 		}
 	];
 	var threeSeries = [
@@ -388,10 +388,10 @@
 					min: 0,
 					title: {
 							text: 'Porcentajes'
-					}
+					},
 			},
 			tooltip: {
-					pointFormat: '<span style="color:#545454">{series.name}</span>: <b>{point.percentage:.0f}%</b><br/>',
+					pointFormat: '<span style="color:#545454">{series.name}</span>: <b>{point.percentage:.1f}%</b><br/>',
 					shared: true
 			},
 			plotOptions: {
